@@ -8,3 +8,5 @@ Currently moving over from a private repo and cleaning stuff up but I will be ha
 * python
 * T-SQL
 * SQLite
+* git
+* linux/bash
