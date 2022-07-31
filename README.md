@@ -8,6 +8,8 @@ Currently moving over from a private repo and cleaning stuff up but I will be ha
 * Python
 * T-SQL
 * SQLite
-* git
-* Linux/bash
+* Git
+* Linux/Bash
 * Powershell
+* Django
+* Docker
