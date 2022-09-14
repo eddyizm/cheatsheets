@@ -3,16 +3,30 @@
 
 ### remove s3 bucket 
 
-`awslocal s3 rm  s3://<bucket_path>/ --recursive`
+`aws s3 rm  s3://<bucket_path>/ --recursive`
 
 ### list buckets  
 
-`awslocal s3api list-buckets`
+`aws s3api list-buckets`
 
 ### list bucket contents
 
-`awslocal s3 ls /<BUCKET_NAME>/`
+`aws s3 ls /<BUCKET_NAME>/`
 
 ### get head object of bucket/key item  
 
-`awslocal s3api head-object --bucket <BUCKET_NAME> --key <path/to/key>`
+`aws s3api head-object --bucket <BUCKET_NAME> --key <path/to/key>`
+
+## DynamoDB 
+
+Delete Table
+
+`aws dynamodb delete-table --table-name <TABLE_NAME>`
+
+Put Item 
+```  
+aws dynamodb put-item \
+    --table-name <TABLE_NAME>  \
+    --item \
+        '{"unique_key": {"S": "id_field"}, "field1_date": {"S": "2020-01-01"}, "field2_date": {"S": "2022-12-31"}}'
+```
