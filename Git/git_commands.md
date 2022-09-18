@@ -106,7 +106,10 @@
 ### delete remote branch (-D = FORCE)
 
     git branch -D branch_name
+
+    # this seems to work better  
     
+    git push origin :branch-to-delete    
 
 ### delete remote branch (-d = local only)
 
