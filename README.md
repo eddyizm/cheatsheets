@@ -14,3 +14,6 @@ Currently moving over from a private repo and cleaning stuff up but I will be ha
 * Powershell
 * Django
 * Docker
+* Angular  
+* TypeScript  
+* Javascript
