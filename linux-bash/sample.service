@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Shell Script on start
+After=network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/home/<username>/bin/myscript.sh
+
+[Install]
+WantedBy=multi-user.target
