@@ -38,3 +38,29 @@ update apt cache then install.
 
 authorize: 
 `cloudflared tunnel login`
+
+---
+### tmux
+
+List sessions
+```  
+
+tmux ls
+```
+attach to sessions
+```
+tmux a  
+```
+
+tmux new -s mysession
+
+```
+
+Detach from session
+```
+Ctrl + b d
+```
+To detach from remote session from a local session 
+```
+Ctrl + b Ctrl + b d 
+```
