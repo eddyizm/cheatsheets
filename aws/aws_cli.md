@@ -26,6 +26,17 @@ aws s3api create-bucket \
 
 `aws s3api head-object --bucket <BUCKET_NAME> --key <path/to/key>`
 
+
+### copy s3 bucket  
+
+```  
+
+aws s3 mb s3://[new-bucket]
+aws s3 sync s3://[old-bucket] s3://[new-bucket]
+aws s3 rb --force s3://[old-bucket]  
+
+```
+
 ## DynamoDB 
 
 Delete Table
