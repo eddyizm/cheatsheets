@@ -1,5 +1,4 @@
 # git 
- https://github.com/eddyizm/eddyizm.git
 
 ### Create new repo
 
