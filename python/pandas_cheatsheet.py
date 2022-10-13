@@ -294,7 +294,10 @@ df = pd.read_csv(v_file, sep=' ', names=['SITE','ID'])
 df = pd.read_csv(FILE, quotechar='"', low_memory=False, encoding='cp1252', dtype=str)
 
 # export to flat file with no header
-df.to_csv(outfile, sep='|', index=False, header=False);
+df.to_csv(outfile, sep='|', index=False, header=False)
+
+# export to csv with quotes using csv module
+df.to_csv(outfile, sep='|', index=False,  quoting=csv.QUOTE_NONNUMERIC)
 
 # print df info to file
 import io
