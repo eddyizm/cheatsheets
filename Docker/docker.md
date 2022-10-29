@@ -30,7 +30,7 @@
     docker run -it -p 5432:8000 webapp # where port 8000 from the container is mapping to 5432 on the host and image name is webapp
     
 	#### for angular app with nginx server
-	sudo docker run --name ufoApp -d -p 51413:80 ufo-ng-app
+	docker run --name ufoApp -d -p 51413:80 ufo-ng-app
 	
 ### sample Dockerfile 
 
@@ -40,3 +40,28 @@
     RUN pip install --upgrade pip setuptools wheel && pip install --upgrapip install --no-cache-dir -r requirements.txt
     COPY . .
     CMD ["uvicorn" , "main:app" , "--host", "0.0.0.0", "--port", "8000"]
+
+### Set up docker permissions
+
+    sudo groupadd docker
+    
+    # add current user to group eg. docker  
+	sudo usermod -aG docker $USER
+
+### show images after pulling  
+
+    docker images
+ 
+ ### show running containers (add -a to show non running containers)
+
+	docker ps  
+
+### docker compose 
+
+Start up a compose file:  
+
+    docker compose up -d
+
+### Check date in container 
+
+    docker exec -it container-id date
