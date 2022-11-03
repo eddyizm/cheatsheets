@@ -37,6 +37,11 @@ aws s3 rb --force s3://[old-bucket]
 
 ```
 
+### move file  
+```
+aws s3 mv s3://mybucket/test.txt s3://mybucket2/  
+```. 
+
 ## DynamoDB 
 
 Delete Table
