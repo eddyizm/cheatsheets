@@ -65,3 +65,9 @@ Start up a compose file:
 ### Check date in container 
 
     docker exec -it container-id date
+
+
+### Check configuration of running container 
+
+    docker inspect <container-id>
+
