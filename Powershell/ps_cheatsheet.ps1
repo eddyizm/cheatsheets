@@ -1,6 +1,10 @@
 # powershell cheatsheet
 ##############################################
 
+# restart computer
+
+Restart-Computer -force # force restart
+
 # handbrake batch processing
 $filelist = Get-ChildItem D:\Video\ -filter *.wmv
 
