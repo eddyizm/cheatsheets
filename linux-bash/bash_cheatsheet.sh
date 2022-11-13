@@ -78,10 +78,17 @@ install on debian buster
 
 ### view full date time stamp
 
-date
+### date
 # set date time
 # date -u {month}{day}{hour}{minute}{year}
 date -u 1014230622
+
+# set date
+date -s '2022-11-12'
+
+date -s '2022-11-12 15:27:00'
+
+date --set="Sat Nov 12 19:27:00 2022"
 
 ### count words or lines in file
 
