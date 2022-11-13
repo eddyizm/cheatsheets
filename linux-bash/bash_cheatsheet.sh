@@ -76,6 +76,13 @@ install on debian buster
     DOW=$(date +%u)
     echo $DOW
 
+### view full date time stamp
+
+date
+# set date time
+# date -u {month}{day}{hour}{minute}{year}
+date -u 1014230622
+
 ### count words or lines in file
 
     wc -l myfile.sh.
