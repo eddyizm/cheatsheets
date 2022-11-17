@@ -225,7 +225,10 @@ git config --global user.signingkey [short-key]
 git config --global commit.gpgsign true
 
 ```
-
+### Configure global push. (As of git 2.37.0 git push will create remote branch)
+	
+	git config --global --add --bool push.autoSetupRemote true
+	
 	
 ### This repository moved
 
