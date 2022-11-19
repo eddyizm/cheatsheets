@@ -4,3 +4,8 @@ curl -s --user 'api:<KEY> \
     -F to=youremail@mail.com \
     -F subject='Hello' \
     -F text='Testing some Mailgun awesomeness!'
+
+# download files with curl  
+
+curl http://some.url --output some.file  
+ 
