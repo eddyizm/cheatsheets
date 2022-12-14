@@ -1,5 +1,9 @@
 // Javascript Cheatsheet. 
 
+// console log variable
+let name = "this is a variable";
+console.log(`testing my text ${name}`);
+
 // in <a> tag works
 onclick="window.close()"    
 
