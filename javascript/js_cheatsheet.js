@@ -1,5 +1,12 @@
 // Javascript Cheatsheet. 
 
+// iterate over array
+let array = [1, 2, 3, 4, 5];
+array.forEach((element) => {
+  console.log(element);
+});
+
+
 // iterate over dictionary
 var dict = this.props.dict;
 
