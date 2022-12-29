@@ -27,5 +27,9 @@ def main():
     print_animal(a0)
     print_animal(a1)
     print_animal(Animal('velociraptor', 'veronica', 'hello'))
-
-if __name__ == '__main__': main()
+    # Return class name
+    print(a0.__class__.__name__)
+    # 'Animal'
+    
+if __name__ == '__main__': 
+    main()
