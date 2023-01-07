@@ -56,4 +56,16 @@ string s = string.Join(",",theArray);
  // strip all chars except numbers
  var result = Regex.Replace(string_to_parse, @"[^\d]")
  
-        
+/* check beginning and endings of characters of string
+*/
+String s = "tadabitch!";
+//this assumes s.Length > 0. If that assumptions might not hold, either check, or use:
+if (s.StartsWith("t"))
+  {
+    Console.WriteLine("Success")
+  }
+
+if (s.EndsWith("tch!"))
+  {
+    Console.WriteLine("Nein, Nein, Nein!")
+  }
