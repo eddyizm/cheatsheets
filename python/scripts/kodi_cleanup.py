@@ -8,11 +8,19 @@ import sqlite3
 db_file='<DB PATH>'
 
 
-# delete files
+def clean_m4a(filepath: str):
+        m4a_path = f'{filepath[:-3]}m4a'
+        if os.path.exists(m4a_path) and '<FILTER BY TEXT IN PATH>' in m4a_path:
+                os.remove(m4a_path)
+                print('removed m4a file: ', filepath)
+
+
 def cleanFiles(filepath: str):
+        '''delete files'''
         if os.path.exists(filepath):
                 os.remove(filepath)
                 print('removed file: ', filepath)
+                clean_m4a(filepath)
         # else:
                  #print('file does not exist: ', filepath)
 
