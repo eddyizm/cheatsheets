@@ -1,5 +1,10 @@
 #!/bin/bash
 
+### ghost script  
+compress pdf 
+
+	`gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$file`  
+	
 ### Check what ports device is listening on
 
     netstat -tuplen  | grep LISTEN
