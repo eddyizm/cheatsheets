@@ -55,3 +55,14 @@ aws dynamodb put-item \
     --item \
         '{"unique_key": {"S": "id_field"}, "field1_date": {"S": "2020-01-01"}, "field2_date": {"S": "2022-12-31"}}'
 ```
+
+Put Item via json file
+
+```
+aws dynamodb put-item \
+    --table-name MusicCollection \
+    --item file://item.json \
+    --return-consumed-capacity TOTAL \
+    --return-item-collection-metrics SIZE
+
+```
