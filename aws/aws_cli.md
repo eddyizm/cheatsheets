@@ -43,6 +43,16 @@ aws s3 mv s3://mybucket/test.txt s3://mybucket2/
 ``` 
 
 ## DynamoDB 
+---
+Create table
+
+```
+awslocal dynamodb create-table \
+    --attribute-definitions AttributeName=<ATT_NAME>,AttributeType=S \
+    --key-schema AttributeName=<ATT_NAME>,KeyType=HASH \
+    --table-name <TABLE_NAME> \
+    --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
+```
 
 Delete Table
 
