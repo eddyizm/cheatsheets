@@ -54,6 +54,18 @@ awslocal dynamodb create-table \
     --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
 ```
 
+
+Get Item
+
+```
+awslocal dynamodb get-item \
+    --table-name <TABLE_NAME> \
+    --key '{"Username": {"S": "Bob"}}'
+```
+
+`aws dynamodb get-item --table-name Users --key '{"Username": {"S": "bob"}}`
+
+
 Delete Table
 
 `aws dynamodb delete-table --table-name <TABLE_NAME>`
