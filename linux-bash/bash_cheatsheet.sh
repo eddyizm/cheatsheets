@@ -192,6 +192,11 @@ for file in *.mp4; do mv $file "${file/<SEARCH_TEXT>/<REPLACEMENT_TEXT>}"; done
 # rysnc back up folder *mirror*
 rsync -avr --delete /Directory1/ /Directory2/
 
+# rsync exclude
+# passing a file or a folder
+--exclude=exclude.txt 
+--exclude Archive 
+
 # dry run 
 --dry-run
 
