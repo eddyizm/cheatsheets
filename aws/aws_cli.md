@@ -66,6 +66,15 @@ awslocal dynamodb get-item \
 `aws dynamodb get-item --table-name Users --key '{"Username": {"S": "bob"}}`
 
 
+Delete Item
+
+```
+aws dynamodb delete-item \
+    --table-name <TABLE_NAME> \
+    --key '{"user_id": { "S": "USER68513334" }}'
+
+```
+
 Delete Table
 
 `aws dynamodb delete-table --table-name <TABLE_NAME>`
