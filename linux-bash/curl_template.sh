@@ -8,4 +8,10 @@ curl -s --user 'api:<KEY> \
 # download files with curl  
 
 curl http://some.url --output some.file  
+
+# get http response code  
+
+curl -IL https://eddyizm.com  
+
+curl -IL https://eddyizm.com | grep -i http
  
