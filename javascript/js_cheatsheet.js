@@ -1,5 +1,8 @@
 // Javascript Cheatsheet. 
 
+// validate XPATH searches in console
+$x("//input[@name='q']")
+
 // iterate over array
 let array = [1, 2, 3, 4, 5];
 array.forEach((element) => {
