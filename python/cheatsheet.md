@@ -163,6 +163,10 @@ print (time.strftime("%H:%M:%S"))
 ### results 
 ### 15:33:58
 ```
+### check if date is inclusive of date span  
+```  
+date_to_check >= start_date <= end_date
+```  
 
 ### measure elapsed time. 
 ```
