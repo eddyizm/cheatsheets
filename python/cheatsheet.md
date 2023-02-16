@@ -45,6 +45,13 @@ except KeyboardInterrupt:
         print('\n')
 ```
 
+### pyautogui take screenshot  
+```  
+>>> import pyautogui
+>>> im1 = pyautogui.screenshot()
+>>> im2 = pyautogui.screenshot('my_screenshot.png')
+```
+
 ### find text in string 
 `word = 'geeks for geeks'`
 ### returns the lowest index of the substring if it is found in given string. If it’s not found then it returns -1.
