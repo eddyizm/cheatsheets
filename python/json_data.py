@@ -3,6 +3,16 @@
 import urllib.request # instead of urllib2 like in Python 2.7
 import json
 
+
+# map json file to dictionary object with object hook
+from collections import namedtuple
+
+def object_decode(json_dict):
+    return namedtuple('X', json_dict.keys())(*json_dict.values())
+
+dict_result = json.loads('<READ FILE TO STRING>', object_hook=object_decode)
+
+
 # write simple dict to json 
 def log_date():
     datestamp = datetime.now().strftime("%Y-%m-%d")
