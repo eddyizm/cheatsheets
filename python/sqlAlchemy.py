@@ -1,3 +1,7 @@
+# order by descending  
+
+order_by(quote_history.c.date_sent.desc())
+
 # specify column length and data type
 quotes = sqlalchemy.Table(
     'quotes',
