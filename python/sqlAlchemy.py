@@ -1,3 +1,16 @@
+# specify column length and data type
+quotes = sqlalchemy.Table(
+    'quotes',
+    metadata,
+    sqlalchemy.Column('id', sqlalchemy.Integer, primary_key=True,
+    autoincrement=True),
+    sqlalchemy.Column('category', sqlalchemy.String(25)),
+    sqlalchemy.Column('quote', sqlalchemy.String(2000)),
+    sqlalchemy.Column('author', sqlalchemy.String(50)),
+    sqlalchemy.Column('date_added', sqlalchemy.DATE(), 
+    server_default=sqlalchemy.sql.expression.false(), nullable=False)
+    )
+
 # copy table structure from one db to new db. 
 from sqlalchemy import Table, MetaData
 metadata = MetaData(bind=db1)
