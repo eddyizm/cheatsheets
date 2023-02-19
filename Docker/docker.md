@@ -62,6 +62,10 @@ Start up a compose file:
 
     docker compose up -d
 
+### get shell in container 
+
+    docker exec -it container-id /bin/sh
+
 ### Check date in container 
 
     docker exec -it container-id date
