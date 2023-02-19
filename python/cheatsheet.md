@@ -167,6 +167,10 @@ print (time.strftime("%H:%M:%S"))
 ```  
 date_to_check >= start_date <= end_date
 ```  
+### get just the current date  
+```  
+datetime.now().date()  
+```  
 
 ### measure elapsed time. 
 ```
