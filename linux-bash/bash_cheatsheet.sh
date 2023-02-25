@@ -1,5 +1,11 @@
 #!/bin/bash
 
+### random number 
+echo $RANDOM  
+
+# random number between 666 and 1 (in a range)
+echo $(( $RANDOM % 666 + 1))
+
 ### ghost script  
 compress pdf 
 
