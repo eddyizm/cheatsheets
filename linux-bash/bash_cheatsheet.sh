@@ -1,5 +1,16 @@
 #!/bin/bash
 
+### increment variable 
+
+var=$((var+1))
+((var=var+1))
+((var+=1))
+((var++))
+
+let "var=var+1"
+let "var+=1"
+let "var++"
+
 ### random number 
 echo $RANDOM  
 
