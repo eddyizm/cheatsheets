@@ -9,6 +9,13 @@ aws s3api create-bucket \
     --region us-east-1
 ```
 
+### copy item from s3 to local
+
+`aws s3 cp s3://bucket/folder/file.txt .`
+
+### copy item from local to s3  
+
+`aws s3 cp ./localfile.txt s3://bucket/`
 
 ### remove s3 bucket 
 
