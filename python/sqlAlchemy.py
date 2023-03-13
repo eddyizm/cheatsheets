@@ -1,3 +1,6 @@
+# get engine from session object for pandas usage
+engine = session.get_bind()
+
 # order by descending  
 
 order_by(quote_history.c.date_sent.desc())
