@@ -61,6 +61,10 @@ awslocal dynamodb create-table \
     --provisioned-throughput ReadCapacityUnits=5,WriteCapacityUnits=5
 ```
 
+Scan Table to get list of records
+
+`aws dynamodb scan --table-name my-table-name`
+
 
 Get Item
 
