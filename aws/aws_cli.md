@@ -17,9 +17,13 @@ aws s3api create-bucket \
 
 `aws s3 cp ./localfile.txt s3://bucket/`
 
-### remove s3 bucket 
+### remove s3 bucket contents
 
 `aws s3 rm  s3://<bucket_path>/ --recursive`
+
+### remove s3 bucket 
+
+`aws s3api delete-bucket --bucket my-bucket --region us-east-1`
 
 ### list buckets  
 
