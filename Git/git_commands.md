@@ -44,6 +44,10 @@
     git checkout master
     git merge featureBranch
     
+### push empty commit!  
+
+    git commit --allow-empty -m "Trigger Build"
+
 ### check history
 
     git log
