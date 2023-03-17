@@ -2,6 +2,10 @@
 
 ---   
 
+### remove gnome from ubuntu  
+
+	sudo apt purge --autoremove ubuntu-desktop
+
 ### new debian set up scripts
 
     sudo apt-get install openssh-server docker.io tmux htop  curl  firefox-esr -Y
