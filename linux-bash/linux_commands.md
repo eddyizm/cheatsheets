@@ -1,6 +1,10 @@
 # Linux Commands
 
----   
+---
+
+### Generate ssh keys  
+
+        ssh-keygen
 
 ### remove gnome from ubuntu  
 
