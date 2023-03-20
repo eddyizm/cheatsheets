@@ -2,6 +2,11 @@
 
 ---
 
+### list disks available  
+
+	fdisk -l
+
+
 ### Generate ssh keys  
 
         ssh-keygen
