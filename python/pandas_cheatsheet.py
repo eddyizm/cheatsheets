@@ -85,7 +85,7 @@ results.to_sql('newTable_Unpiv', con = engine, if_exists = 'replace', index=Fals
 df.at['C', 'x'] = 10
 
 # drop columsn except whats mentioned 
-df.filter(items=['one', 'three'])
+df = df.filter(items=['one', 'three'])
 # or 
 df = df.filter(like='b_')
 
