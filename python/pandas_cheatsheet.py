@@ -1,3 +1,17 @@
+# check if a value exists, returns bool  
+>>> df = pd.DataFrame(np.arange(10).reshape(-1, 2), columns=['A', 'B'])
+>>> df
+   A  B
+0  0  1
+1  2  3
+2  4  5
+3  6  7
+4  8  9
+>>> 3 in df.B.values
+True
+>>> 4 in df.B.values
+False
+
 # swap column values on condition
  df['first_name'],df['last_name']=np.where(df['country']=='Japan',(df['last_name'],df['first_name']),(df['first_name'],df['last_name']))
 
@@ -85,7 +99,7 @@ results.to_sql('newTable_Unpiv', con = engine, if_exists = 'replace', index=Fals
 df.at['C', 'x'] = 10
 
 # drop columsn except whats mentioned 
-df.filter(items=['one', 'three'])
+df = df.filter(items=['one', 'three'])
 # or 
 df = df.filter(like='b_')
 
