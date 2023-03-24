@@ -1,3 +1,6 @@
+# get unique values from column  
+df.B.unique()
+
 # check if a value exists, returns bool  
 >>> df = pd.DataFrame(np.arange(10).reshape(-1, 2), columns=['A', 'B'])
 >>> df
