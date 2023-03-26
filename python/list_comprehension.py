@@ -1,3 +1,7 @@
+# prepend value to existing list  
+
+array.insert(0, value)
+
 # filter directory files with ends with 
 results= [x for x in os.listdir(FILE_DIR) if x.lower().endswith(('<filter>'))] # can add multiple filters with tuple.
 
