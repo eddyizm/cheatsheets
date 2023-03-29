@@ -1,5 +1,7 @@
-// create and download a csv file
+// create and download a csv file in react app
 // where headers is an array and data is a string with values, eg for a single row.
+let head = ['id', 'name', 'county']
+let filler = '"2","bob","king"'
 
 const downloadSampleFile = (data, headers) => {  
     let csvRows = [];
@@ -14,3 +16,5 @@ const downloadSampleFile = (data, headers) => {
     a.setAttribute('download', 'sample.csv');
     a.click()
   }
+
+downloadSampleFile(filler, head)
