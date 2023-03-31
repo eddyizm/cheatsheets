@@ -1,3 +1,11 @@
+# trap integrity error and continue (in a for loop for example)
+try:
+    session.commit()
+except sqlalchemy.exc.IntegrityError as exc:
+    print(exc.orig) # full error text
+    print(exc.orig.diag.message_detail) # detail
+    session.rollback()
+                    
 # get engine from session object for pandas usage
 engine = session.get_bind()
 
