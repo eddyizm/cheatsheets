@@ -1,7 +1,11 @@
 #!/bin/bash
 
-### increment variable 
+### display colours in terminal
+for i in {0..255} ; do
+    printf "\x1b[38;5;${i}mcolour${i}\n"
+done
 
+### increment variable 
 var=$((var+1))
 ((var=var+1))
 ((var+=1))
