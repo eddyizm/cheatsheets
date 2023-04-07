@@ -274,22 +274,6 @@ urllib.request.urlretrieve(url, file_name)
 ### remove duplicates in list
 `mylist = list(dict.fromkeys(original_list))`
 
-### dictionary
-```
-myDict  {} ### create
-
-myDict['MyKey'] = '1234' ### add keys
-
-del myDict['MyKey'] ### delete key
-
-for key,value in myDict.items(): ### iterate key and values
-for key in myDict: ### iterate keys
-for value in myDict: ### iterate values
-```
-
-### reset values of dict while keeping keys
-`d = d.fromkeys(d, '')`
-
 ### unzip file
 ```
 import zipfile
