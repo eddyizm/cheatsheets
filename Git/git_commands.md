@@ -197,6 +197,9 @@ git push origin master
 
 	git reset --merge ORIG_HEAD
 
+### Revert to particular hash  
+	git reset --soft <HASH>
+	
 ### Reverting last commit  
 
     git reset <file>

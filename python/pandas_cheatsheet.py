@@ -1,3 +1,6 @@
+# drop duplicates based on subset or use a single column
+df = df.drop_duplicates(subset=['col1', 'col2', ...])
+
 # get unique values from column  
 df.B.unique()
 
