@@ -1,5 +1,13 @@
 // Javascript Cheatsheet. 
 
+// filter array on multipe fields
+const deDupe = (arrayToFilter) => {
+  const unique = arrayToFilter.filter((obj, index) => {
+    return index === arrayToFilter.findIndex(o => obj.id === o.id && obj.name === o.name);
+  })
+  return unique
+}
+
 // validate XPATH searches in console
 $x("//input[@name='q']")
 
