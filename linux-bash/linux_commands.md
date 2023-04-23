@@ -23,6 +23,9 @@
     apt install lightdm i3
     
     sudo apt-get install openssh-server docker.io tmux htop  curl  firefox-esr rsync python3-venv -Y
+	# not sure why but this isn't on all installs?
+	sudo apt install systemd-timesyncd
+
 
 ## cloud flare 
 
