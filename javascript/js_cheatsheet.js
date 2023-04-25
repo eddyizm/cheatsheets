@@ -1,5 +1,8 @@
 // Javascript Cheatsheet. 
 
+// set 3 decimal points and trim trailing zeros
+parseFloat(Number(value).toFixed(3))
+
 // filter array on multipe fields
 const deDupe = (arrayToFilter) => {
   const unique = arrayToFilter.filter((obj, index) => {
