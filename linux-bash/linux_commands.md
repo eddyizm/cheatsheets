@@ -79,6 +79,11 @@ To detach from remote session from a local session
 Ctrl+b Ctrl+b d 
 ```
 
+Move pane to new position
+```
+Ctrl+b {  
+```
+
 ### IO redirection  
 
 	cmd < file
