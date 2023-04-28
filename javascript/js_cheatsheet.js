@@ -1,5 +1,14 @@
 // Javascript Cheatsheet. 
 
+// check if value is null or undefined (the classic)
+let a;
+
+if (a === null || a === undefined) { // true
+  console.log('Null or undefined value!');
+} else {
+  console.log(a);
+}
+
 // set 3 decimal points and trim trailing zeros
 parseFloat(Number(value).toFixed(3))
 
