@@ -1,4 +1,4 @@
-## AWS CLI 
+# AWS CLI 
 ---
 
 ### create s3 bucket  
@@ -118,4 +118,35 @@ aws dynamodb put-item \
     --return-consumed-capacity TOTAL \
     --return-item-collection-metrics SIZE
 
+```
+## SQS  
+Create queue
+```
+  aws sqs create-queue --queue-name sample-queue
+  {
+      "QueueUrl": "http://localhost:4566/000000000000/sample-queue"
+  }
+```
+List queues
+```  
+  aws sqs list-queues
+  {
+      "QueueUrls": [
+          "http://localhost:4566/000000000000/sample-queue"
+      ]
+  }  
+```
+Send message to queue  
+```  
+awslocal sqs send-message --queue-url http://localhost:4566/00000000000/sample-queue --message-body test
+{
+    "MD5OfMessageBody": "098f6bcd4621d373cade4e832627b4f6",
+    "MessageId": "74861aab-05f8-0a75-ae20-74d109b7a76e"
+}
+```
+Retrieve a message from queue (no filters)
+```
+aws sqs receive-message --queue-url http://localhost:4566/00000000000/sample-queue --attribute-names All --message-attribute-names All 
+# add to retrieve more than one
+--max-number-of-messages 10  
 ```
