@@ -1,5 +1,11 @@
 // Javascript Cheatsheet. 
 
+// sum array of number values
+let numArray = [1001,1002,1003,1004] 
+numArray.reduce((a, b) => {
+  return a + b;
+});
+
 // check if value is null or undefined (the classic)
 let a;
 
