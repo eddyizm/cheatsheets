@@ -127,6 +127,11 @@ Create queue
       "QueueUrl": "http://localhost:4566/000000000000/sample-queue"
   }
 ```
+Delete queue 
+```  
+ aws sqs delete-queue --queue-url http://localhost:4566/00000000000/sample-queue
+```  
+
 List queues
 ```  
   aws sqs list-queues
