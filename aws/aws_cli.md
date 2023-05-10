@@ -124,12 +124,12 @@ Create queue
 ```
   aws sqs create-queue --queue-name sample-queue
   {
-      "QueueUrl": "http://localhost:4566/000000000000/sample-queue"
+      "QueueUrl": "http://localhost:4566/80398EXAMPLE/sample-queue"
   }
 ```
 Delete queue 
 ```  
- aws sqs delete-queue --queue-url http://localhost:4566/00000000000/sample-queue
+ aws sqs delete-queue --queue-url http://localhost:4566/80398EXAMPLE/sample-queue
 ```  
 
 List queues
@@ -137,13 +137,13 @@ List queues
   aws sqs list-queues
   {
       "QueueUrls": [
-          "http://localhost:4566/000000000000/sample-queue"
+          "http://localhost:4566/80398EXAMPLE/sample-queue"
       ]
   }  
 ```
 Send message to queue  
 ```  
-awslocal sqs send-message --queue-url http://localhost:4566/00000000000/sample-queue --message-body test
+awslocal sqs send-message --queue-url http://localhost:4566/80398EXAMPLE/sample-queue --message-body test
 {
     "MD5OfMessageBody": "098f6bcd4621d373cade4e832627b4f6",
     "MessageId": "74861aab-05f8-0a75-ae20-74d109b7a76e"
@@ -151,7 +151,12 @@ awslocal sqs send-message --queue-url http://localhost:4566/00000000000/sample-q
 ```
 Retrieve a message from queue (no filters)
 ```
-aws sqs receive-message --queue-url http://localhost:4566/00000000000/sample-queue --attribute-names All --message-attribute-names All 
+aws sqs receive-message --queue-url http://localhost:4566/80398EXAMPLE/sample-queue --attribute-names All --message-attribute-names All 
 # add to retrieve more than one
 --max-number-of-messages 10  
 ```
+After retrieving a message, delete the message from queue using the receipt handle  
+```  
+aws sqs delete-message --queue-url https://sqs.us-east-1.amazonaws.com/80398EXAMPLE/MyQueue --receipt-handle <RECEIPT HANDLE>
+```  
+
