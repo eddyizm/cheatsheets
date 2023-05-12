@@ -78,7 +78,14 @@ To detach from remote session from a local session
 ```
 Ctrl+b Ctrl+b d 
 ```
-
+Access prompt from within tmux  
+```  
+Ctrl+b :
+```  
+Reload config  
+```
+Ctrl+b : <then in prompt> source-file ~/.tmux.conf  
+```
 Move pane to new position
 ```
 Ctrl+b {  
