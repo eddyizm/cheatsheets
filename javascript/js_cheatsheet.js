@@ -1,5 +1,8 @@
 // Javascript Cheatsheet. 
 
+// get array size 
+console.log(myArray.length)
+
 // sum array of number values
 let numArray = [1001,1002,1003,1004] 
 numArray.reduce((a, b) => {

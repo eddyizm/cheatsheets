@@ -168,7 +168,4 @@ for(var index in nums) {
    console.log(nums[index]) 
 } 
 ```
-// count array 
-
-console.log(array.length)
 	
