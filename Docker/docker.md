@@ -75,3 +75,7 @@ Start up a compose file:
 
     docker inspect <container-id>
 
+### Copy file from container to local file system  
+
+    docker cp <container-id>:<FULL-CONTAINER-PATH> <HOST-LOCATION>
+
