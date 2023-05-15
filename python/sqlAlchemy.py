@@ -1,3 +1,6 @@
+# query by multiple where clauses 
+table_def.select().where((table_def.c.id == table_def.id) & (table_def.c.active == True))
+
 # trap integrity error and continue (in a for loop for example)
 try:
     session.commit()
