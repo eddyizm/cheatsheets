@@ -1,3 +1,9 @@
+# CORE result not found exception 
+try:
+    query_for_rows()
+except sqlalchemy.exc.NoResultFound as ex:
+    raise ex('no data found')
+
 # query by multiple where clauses 
 table_def.select().where((table_def.c.id == table_def.id) & (table_def.c.active == True))
 
