@@ -89,7 +89,17 @@ Ctrl+b : <then in prompt> source-file ~/.tmux.conf
 Move pane to new position
 ```
 Ctrl+b {  
+```  
+
+Enter prompt  
 ```
+Ctrl+b :  
+```  
+Resize pane  
+```  
+# after entering prompt  
+:resize-pane -D 10 (Resizes the current pane down by ten cells)
+```  
 
 ### IO redirection  
 
