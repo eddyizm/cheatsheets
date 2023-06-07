@@ -26,3 +26,6 @@ my_dict = my_dict.fromkeys(my_dict, '')
 
 # replace key by value by creating
 {'two' if k == 'too' else k:v for k,v in d.items()}
+
+# replace by pop 
+dictionary[new_key] = dictionary.pop(old_key)
