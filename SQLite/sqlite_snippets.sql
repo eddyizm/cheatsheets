@@ -58,19 +58,16 @@ sqlite3 -- start command line
 
 -- format output 
 
-```  
-
 sqlite> .mode line
 sqlite> select * from tbl1;
-one = hello
-two = 10
+-- one = hello
+-- two = 10
 
-one = goodbye
-two = 20
-```
+-- one = goodbye
+-- two = 20
+
 
 -- set output and run query. 
-``` 
 sqlite> .output results.txt
 sqlite> .mode column
 sqlite> select * from tbl1;
@@ -78,7 +75,6 @@ one         two
 ----------  ----------
 hello       10        
 goodbye     20        
-```
 
 -- show header
 sqlite> .headers on
