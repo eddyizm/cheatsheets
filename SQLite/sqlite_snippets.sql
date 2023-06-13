@@ -78,3 +78,8 @@ sqlite> select * from tbl1;
 
 -- show header
 sqlite> .headers on
+
+-- delete kodi empty shows *excluding shows i will use later*
+select tv.idShow, tv.c00 from tvshow as tv where idShow NOT IN (select distinct idShow from episode) AND tv.idShow NOT IN (45, 86, 66, 62);
+
+delete  from tvshow where idShow NOT IN (select distinct idShow from episode) AND idShow NOT IN (45, 55);
