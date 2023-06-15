@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>  
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">  
+<_locDefinition xmlns="urn:locstudio">  
+    <_locDefault _loc="locNone" />  
+    <_locTag _loc="locData">Title</_locTag>  
+    <_locTag _loc="locData">Description</_locTag>  
+    <_locTag _loc="locData">Author</_locTag>  
+    <_locTag _loc="locData">ToolTip</_locTag>  
+   <_locTag _loc="locData">Default</_locTag>  
+</_locDefinition>  
+<CodeSnippet Format="1.0.0">  
+<Header>  
+<Title>TryCatch</Title>  
+                        <Shortcut></Shortcut>  
+<Description>Example Snippet for Try-Catch.</Description>  
+<Author>SQL Server Books Online Example</Author>  
+<SnippetTypes>  
+                                <SnippetType>SurroundsWith</SnippetType>  
+</SnippetTypes>  
+</Header>  
+<Snippet>  
+<Declarations>  
+                                <Literal>  
+                                <ID>CatchCode</ID>  
+                                <ToolTip>Code to handle the caught error</ToolTip>  
+                                <Default>CatchCode</Default>  
+                                </Literal>  
+</Declarations>  
+<Code Language="SQL"><![CDATA[  
+BEGIN TRY  
+
+$selected$ $end$  
+
+END TRY  
+BEGIN CATCH  
+
+$CatchCode$  
+
+END CATCH;  
+]]>  
+</Code>  
+</Snippet>  
+</CodeSnippet>  
+</CodeSnippets>  
