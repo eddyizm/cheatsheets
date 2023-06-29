@@ -144,6 +144,13 @@ for x in num_set:
 ### 010
 ```
 
+### pad number in string  
+```
+>>> str1 = "3158 reviews"
+>>> int(''.join(filter(str.isdigit, str1)))
+3158
+```  
+
 ### get external IP address
 ```
 import requests
