@@ -103,19 +103,19 @@ Resize pane
 
 ### IO redirection  
 
-	cmd < file
-	# input of cmd from file
-	cmd1 <(cmd2)
-	# output of cmd2 as file input to cmd1
-	cmd > /dev/null
-	# standard output (stdout) of cmd to file
-	cmd >> file
-	# append stdout to file
-	cmd 2> file
-	# error output (stderr) of cmd to file
-	cmd 1>&2
-	# stdout to same place as stderr
-	cmd 2>&1
-	# stderr to same place as stdout
-	cmd &> file
-	# every output of cmd to file
+cmd < file
+# input of cmd from file
+cmd1 <(cmd2)
+# output of cmd2 as file input to cmd1
+cmd > /dev/null
+# standard output (stdout) of cmd to file
+cmd >> file
+# append stdout to file
+cmd 2> file
+# error output (stderr) of cmd to file
+cmd 1>&2
+# stdout to same place as stderr
+cmd 2>&1
+# stderr to same place as stdout
+cmd &> file
+# every output of cmd to file
