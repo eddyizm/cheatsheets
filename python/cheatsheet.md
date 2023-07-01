@@ -18,6 +18,9 @@ str(uuid.uuid4())
 ### split list to strings
 `' '.join(list)`
 
+### split string on character (pipe in this sample), returns list
+`.split('|')`  
+
 ### generate secret key 
 ```
 import secrets
@@ -143,6 +146,13 @@ for x in num_set:
 ### 009
 ### 010
 ```
+
+### pad number in string  
+```
+>>> str1 = "3158 reviews"
+>>> int(''.join(filter(str.isdigit, str1)))
+3158
+```  
 
 ### get external IP address
 ```
