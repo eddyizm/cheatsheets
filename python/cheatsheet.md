@@ -18,6 +18,9 @@ str(uuid.uuid4())
 ### split list to strings
 `' '.join(list)`
 
+### split string on character (pipe in this sample), returns list
+`.split('|')`  
+
 ### generate secret key 
 ```
 import secrets
