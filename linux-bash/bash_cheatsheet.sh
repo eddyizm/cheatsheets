@@ -153,6 +153,13 @@ chmod +x script.sh
 # or 
 chmod 0755 script.sh
 
+# check if any args are supplied
+if [ "$#" -eq 0 ]
+then
+  echo "No arguments supplied"
+  exit 1
+fi
+
 # bash script position args
 
 test.sh > 
