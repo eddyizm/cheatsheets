@@ -1,3 +1,6 @@
+# inner join on specified columns
+df3 = df3.merge(df2, on=['col1', 'col2'], how='inner')
+
 # drop duplicates based on subset or use a single column
 df = df.drop_duplicates(subset=['col1', 'col2', ...])
 
