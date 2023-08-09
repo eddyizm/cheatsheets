@@ -1,3 +1,6 @@
+# query rows where value equals, very sql like
+df = df.query('A == "foo"')
+
 # inner join on specified columns
 df3 = df3.merge(df2, on=['col1', 'col2'], how='inner')
 
