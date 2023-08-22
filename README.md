@@ -9,6 +9,7 @@ Currently moving over from a private repo and cleaning stuff up but I will be ha
 * Python
 * T-SQL
 * SQLite
+* PLpgSQL
 * Git
 * Linux/Bash
 * Powershell
