@@ -1,5 +1,13 @@
 // Javascript Cheatsheet. 
 
+// console log object to json
+// The third parameter passed will be the number of spaces to indent the members.
+var obj = {
+  data: 'data',
+  data1: 'data1'
+};
+console.log(JSON.stringify(obj, 0, 2));
+
 // check if value is number
 isNaN(Number('55')) // false
 isNaN(Number('55bob')) // true
