@@ -1,5 +1,9 @@
 // Javascript Cheatsheet. 
 
+// check if value is number
+isNaN(Number('55')) // false
+isNaN(Number('55bob')) // true
+
 // get array size 
 console.log(myArray.length)
 
