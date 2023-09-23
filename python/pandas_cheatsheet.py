@@ -1,3 +1,9 @@
+# write string as row, such as a header that is not part of the dataframe columns.
+# where sample string is comma separating, passing the other delimiter means no quotes will be applied.
+# you can then append a regular dataframe with a custom header.
+header_sample = TEST,TEST0000000,2021-09-16,2021-09-16,test,test-value,23
+pd.DataFrame([header_sample]).to_csv(csv_buffer, index=False, header=False, sep='|', quotechar='"', quoting=csv.QUOTE_MINIMAL) 
+
 # query rows where value equals, very sql like
 df = df.query('A == "foo"')
 
