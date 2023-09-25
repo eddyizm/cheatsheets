@@ -1,3 +1,6 @@
+# bump dataframe index by 1 to start index at 1 instead of zero. 
+df.index += 1
+
 # write string as row, such as a header that is not part of the dataframe columns.
 # where sample string is comma separating, passing the other delimiter means no quotes will be applied.
 # you can then append a regular dataframe with a custom header.
