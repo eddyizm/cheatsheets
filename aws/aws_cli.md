@@ -17,6 +17,10 @@ aws s3api create-bucket \
 
 `aws s3 cp ./localfile.txt s3://bucket/`
 
+### remove item from s3  
+
+`aws s3 rm s3://bucket/localfile.txt`  
+
 ### remove s3 bucket contents
 
 `aws s3 rm  s3://<bucket_path>/ --recursive`
