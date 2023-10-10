@@ -4,17 +4,18 @@ code snippets instead of bookmarking and searching stack overflow
 Currently moving over from a private repo and cleaning stuff up but I will be happy to take in any PR's to better orgnize my "junk drawers". 
 ### Languages or Tech
 
-* AWS  
-* C# 
 * Python
 * T-SQL
 * SQLite
 * PLpgSQL
+* Javascript
+* Powershell
+* TypeScript
+* C# 
 * Git
 * Linux/Bash
-* Powershell
 * Django
 * Docker
-* Angular  
-* TypeScript  
-* Javascript
+* Angular
+* AWS
+* Virtual Box
