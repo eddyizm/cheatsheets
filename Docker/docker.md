@@ -75,6 +75,15 @@ Start up a compose file:
 
     docker inspect <container-id>
 
+### check logs  
+	docker logs <container-id>
+ 	docker logs <container-id> --tail 
+
+### check logs  
+	docker logs <container-id>
+### check logs  
+	docker logs <container-id>
+
 ### Copy file from container to local file system  
 
     docker cp <container-id>:<FULL-CONTAINER-PATH> <HOST-LOCATION>
