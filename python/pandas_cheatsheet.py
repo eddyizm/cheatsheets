@@ -1,3 +1,7 @@
+# output to excel
+df = pd.read_csv(INPUT_FILE, dtype=object) # object type will translate to TEXT in excel
+df.to_excel(OUTPUT_FILE, index=False)
+
 # bump dataframe index by 1 to start index at 1 instead of zero. 
 df.index += 1
 
