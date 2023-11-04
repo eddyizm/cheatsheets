@@ -1,0 +1,6 @@
+# when running on windows wsl2, requires a few things to work/expose the wsl network
+# wsl2 port forwarding, 0.0.0.0 binds all requests
+netsh interface portproxy add v4tov4 listenport=<external_port> listenaddress=<0.0.0.0> connectport=<container_port> connectaddress=<wsl2 vm ip>
+
+# display proxy
+netsh interface portproxy show all
