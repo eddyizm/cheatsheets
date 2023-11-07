@@ -1,3 +1,8 @@
+# output to sqlite 
+import sqlalchemy
+db = sqlalchemy.create_engine('sqlite:///mydatabase.db')
+df.to_sql('table_name', db, index=False, if_exists='append')
+
 # output to excel
 df = pd.read_csv(INPUT_FILE, dtype=object) # object type will translate to TEXT in excel
 df.to_excel(OUTPUT_FILE, index=False)
