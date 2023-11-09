@@ -23,3 +23,6 @@ blueutil --power 1 or blueutil -p 1
 
 # Switch bluetooth off
 blueutil --power 0 or blueutil -p 0
+
+# Edit hosts file  
+sudo nano /private/etc/hosts  
