@@ -7,3 +7,9 @@ netsh interface portproxy add v4tov4 listenport=<external_port> listenaddress=<0
 
 # display proxy
 netsh interface portproxy show all
+
+# setting up on oracle linux 
+sudo yum install podman  
+
+# add podman compose via pip3 if not found in repo
+sudo pip3 install podman-compose
