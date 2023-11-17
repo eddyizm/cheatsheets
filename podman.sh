@@ -13,3 +13,11 @@ sudo yum install podman
 
 # add podman compose via pip3 if not found in repo
 sudo pip3 install podman-compose
+
+# build a Dockerfile
+docker.io/
+
+# create pod  
+podman pod create --name=<POD_NAME>
+
+docker.io/nginx:latest

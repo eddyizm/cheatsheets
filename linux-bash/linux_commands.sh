@@ -1,24 +1,20 @@
 # Linux Commands
 
 ---
-### os version  
-	lsb_release -a
+# os version  
+lsb_release -a
 
 
-### list disks available  
+# list disks available  
+fdisk -l
 
-	fdisk -l
+# Generate ssh keys  
+ssh-keygen
 
+# remove gnome from ubuntu  
+sudo apt purge --autoremove ubuntu-desktop
 
-### Generate ssh keys  
-
-        ssh-keygen
-
-### remove gnome from ubuntu  
-
-	sudo apt purge --autoremove ubuntu-desktop
-
-### new debian set up scripts
+# new debian set up scripts
 
     sudo apt-get install openssh-server docker.io tmux htop  curl  firefox-esr -Y
     
@@ -29,28 +25,34 @@
 	# not sure why but this isn't on all installs?
 	sudo apt install systemd-timesyncd
 
+# check free memory 
+free -hw
+[opc@amd-micro quotes]$ free -hw
+              total        used        free      shared     buffers       cache   available
+Mem:          936Mi       279Mi       108Mi        10Mi       0.0Ki       549Mi       483Mi
+Swap:         1.8Gi       504Mi       1.3Gi
 
 ## cloud flare 
 
-### set up cloudflare tunnels (ubuntu)
+# set up cloudflare tunnels (ubuntu)
 
 UBUNTU: 
-```  
+  
 $ echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/ focal main' |
 sudo tee /etc/apt/sources.list.d/cloudflare-main.list
-```
+
 
 DEBIAN:
-```
+
 echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/ buster main' |
 sudo tee /etc/apt/sources.list.d/cloudflare-main.list
-```
+
 
 
 import gpg key: 
-```  
+  
 $ sudo curl https://pkg.cloudflare.com/cloudflare-main.gpg -o /usr/share/keyrings/cloudflare-main.gpg
-```  
+  
 
 update apt cache then install. 
 `sudo apt install cloudflared`
@@ -60,52 +62,37 @@ authorize:
 
 ---
 ### tmux
-
-List sessions
-```  
-
+# List sessions
 tmux ls
-```
-attach to sessions
-```
+
+# attach to sessions
 tmux a  
-
 tmux new -s mysession
-```
 
-Detach from session
-```
+# Detach from session
 Ctrl+b d
-```
-To detach from remote session from a local session 
-```
-Ctrl+b Ctrl+b d 
-```
-Access prompt from within tmux  
-```  
-Ctrl+b :
-```  
-Reload config  
-```
-Ctrl+b : <then in prompt> source-file ~/.tmux.conf  
-```
-Move pane to new position
-```
-Ctrl+b {  
-```  
 
-Enter prompt  
-```
+# To detach from remote session from a local session 
+Ctrl+b Ctrl+b d 
+
+# Access prompt from within tmux  
+Ctrl+b :
+  
+# Reload config  
+Ctrl+b : <then in prompt> source-file ~/.tmux.conf  
+
+# Move pane to new position
+Ctrl+b {  
+
+# Enter prompt  
 Ctrl+b :  
-```  
-Resize pane  
-```  
+  
+# Resize pane  
+  
 # after entering prompt  
 :resize-pane -D 10 (Resizes the current pane down by ten cells)
-```  
 
-### IO redirection  
-
+# IO redirection  
 cmd < file
 # input of cmd from file
 cmd1 <(cmd2)

@@ -10,3 +10,9 @@ ORDER  BY conrelid::regclass::text, contype DESC;
 -- list indexes
 select *
 from pg_indexes
+
+-- show connections
+SELECT backend_start, application_name,
+query, backend_type, state, wait_event,
+* FROM pg_stat_activity
+order by 1 desc ;
