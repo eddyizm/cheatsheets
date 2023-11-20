@@ -1,9 +1,7 @@
 # Linux Commands
-
 ---
 # os version  
 lsb_release -a
-
 
 # list disks available  
 fdisk -l
