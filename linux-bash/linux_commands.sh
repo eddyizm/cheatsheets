@@ -3,6 +3,9 @@
 # os version  
 lsb_release -a
 
+# get more details on os version
+cat /etc/os-release
+
 # list disks available  
 fdisk -l
 
