@@ -8,7 +8,7 @@ netsh interface portproxy add v4tov4 listenport=<external_port> listenaddress=<0
 # display proxy
 netsh interface portproxy show all
 
-# setting up on oracle linux 
+# setting up on oracle fedora linux 
 sudo yum install podman  
 
 # add podman compose via pip3 if not found in repo
@@ -20,4 +20,5 @@ docker.io/
 # create pod  
 podman pod create --name=<POD_NAME>
 
-docker.io/nginx:latest
+docker.io/nginx:latest  
+
