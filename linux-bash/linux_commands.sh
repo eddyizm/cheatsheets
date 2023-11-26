@@ -1,5 +1,8 @@
 # Linux Commands
 ---
+# list running systemd services 
+systemctl --user --type=service --state=running
+
 # os version  
 lsb_release -a
 
@@ -93,7 +96,7 @@ Ctrl+b :
 # after entering prompt  
 :resize-pane -D 10 (Resizes the current pane down by ten cells)
 
-# IO redirection  
+### IO redirection  
 cmd < file
 # input of cmd from file
 cmd1 <(cmd2)
