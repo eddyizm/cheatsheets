@@ -10,7 +10,12 @@ django-admin startproject mysite
 # after creating project verify django is installed correctly  
 python manage.py runserver
 # To create your app, make sure you’re in the same directory as **manage.py** and type this command:		
-python manage.py startapp <AppName>  
+python manage.py startapp <APPNAME>
+
+# make sure to add the app to your settings file 
+# Application definition
+# INSTALLED_APPS = [ <APPNAME> ]
+
 
 ''' network '''
 # test django site on mobile device
@@ -67,7 +72,8 @@ urlpatterns = [
 # delete table records
 def delete_everything(self):
 	Reporter.objects.all().delete()
-		
+
+
 ''' Default Models
 password, 
 last_login, 
