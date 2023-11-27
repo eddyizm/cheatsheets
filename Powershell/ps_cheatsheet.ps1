@@ -1,6 +1,9 @@
 # powershell cheatsheet
 ##############################################
 
+# usually use cmd or mingw64 to show open ports
+netstat -abn
+
 # restart computer
 
 Restart-Computer -force # force restart
