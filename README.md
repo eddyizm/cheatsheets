@@ -5,6 +5,7 @@ Currently moving over from a private repo and cleaning stuff up but I will be ha
 ### Languages or Tech
 
 * Python
+* Rust
 * T-SQL
 * SQLite
 * PLpgSQL
@@ -18,4 +19,6 @@ Currently moving over from a private repo and cleaning stuff up but I will be ha
 * Docker
 * Angular
 * AWS
+* Podman
+* Flutter
 * Virtual Box
