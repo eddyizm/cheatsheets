@@ -4,9 +4,11 @@ mod main_loops;
 mod error_handling_sample;
 mod hash_map_sample;
 mod build_name;
+mod enum_sample;
 
 fn main(){
-    build_name::name_exercise();
+    enum_sample::enum_exercise();
+    //build_name::name_exercise();
     //hash_map_sample::hash_sample();
     //error_handling_sample::er_sample();
     //main_loops::create_cars()
