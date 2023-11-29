@@ -1,6 +1,27 @@
 fn process_str(s: String) {}
 fn process_simple(input: u32) {}
 
+
+fn longest_word<'a>(x: &'a String, y: &'a String) -> &'a String {
+    // Make sure to declare generic lifetime parameters inside angle brackets, and add the declaration between the parameter list and the function name.
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
+}
+
+#[derive(Debug)]
+struct Highlight<'document>(&'document str);
+
+pub fn annotated_lifetimes_in_types() {
+    let text = String::from("The quick brown fox jumps over the lazy dog.");
+    let fox = Highlight(&text[4..19]);
+    let dog = Highlight(&text[35..43]);
+    println!("{:?}", fox);
+    println!("{:?}", dog);
+}
+
 fn print_greeting(message: &String) {
     println!("Greeting: {}", message);
   }
