@@ -5,13 +5,15 @@
 // mod hash_map_sample;
 // mod build_name;
 //mod enum_sample;
-mod if_else_sample;
+//mod if_else_sample;
+mod result_sample;
 
 fn main(){
-    if_else_sample::as_expression();
-    if_else_sample::multiple_conditions();
-    if_else_sample::declare_and_set();
-    if_else_sample::if_else();
+    result_sample::main_division_example()
+    // if_else_sample::as_expression();
+    // if_else_sample::multiple_conditions();
+    // if_else_sample::declare_and_set();
+    // if_else_sample::if_else();
     //enum_sample::enum_exercise();
     //build_name::name_exercise();
     //hash_map_sample::hash_sample();
