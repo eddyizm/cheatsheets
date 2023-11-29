@@ -7,10 +7,12 @@
 // mod enum_sample;
 // mod if_else_sample;
 // mod result_sample;
-mod vector_sample;
+// mod vector_sample;
+mod ownership_example;
 
 fn main(){
-    vector_sample::main_vector();
+    ownership_example::ownership_ex();
+    //vector_sample::main_vector();
     // result_sample::main_division_example()
     // if_else_sample::as_expression();
     // if_else_sample::multiple_conditions();
