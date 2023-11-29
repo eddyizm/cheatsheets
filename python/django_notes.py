@@ -1,5 +1,8 @@
 ''' django notes '''
 
+# django orm - filter by boolean field
+files = MyModel.objects.filter(downloaded=False)
+
 # after creating virtual environment, install django
 pip install django
 django-admin --version
