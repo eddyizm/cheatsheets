@@ -14,3 +14,11 @@ pm list packages | grep 'samsung'
 
 # remove
 pm uninstall --user 0 <PACKAGE NAME>
+
+# list emulaters
+emulator -list-avds
+
+# launch emulator for cli
+cd $ANDROID_HOME/emulator
+
+./emulator -avd test_avd_27 
