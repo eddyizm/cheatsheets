@@ -4,12 +4,14 @@
 // mod error_handling_sample;
 // mod hash_map_sample;
 // mod build_name;
-//mod enum_sample;
-//mod if_else_sample;
-mod result_sample;
+// mod enum_sample;
+// mod if_else_sample;
+// mod result_sample;
+mod vector_sample;
 
 fn main(){
-    result_sample::main_division_example()
+    vector_sample::main_vector();
+    // result_sample::main_division_example()
     // if_else_sample::as_expression();
     // if_else_sample::multiple_conditions();
     // if_else_sample::declare_and_set();
