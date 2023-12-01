@@ -1,5 +1,4 @@
 # prepend value to existing list  
-
 array.insert(0, value)
 
 # filter directory files with ends with 
@@ -120,3 +119,8 @@ greater_than = [ n > x for n,x in combined ]
 # check if list is empty
 if not vlist:
 	print ('list is empty')
+
+# list comprehension
+temperatures = [-5, 29, 26, -7, 1, 18, 12, 31]
+temperatures_adjusted = [temp + 20 for temp in temperatures]
+# temperatures_adjusted is now [15, 49, 46, 13, 21, 38, 32, 51]
