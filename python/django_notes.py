@@ -3,6 +3,12 @@
 # django orm - filter by boolean field
 files = MyModel.objects.filter(downloaded=False)
 
+# update field in record  
+MyModel.objects.filter(pk=some_value).update(field1='some value')
+
+
+''' Set up '''
+
 # after creating virtual environment, install django
 pip install django
 django-admin --version
@@ -12,6 +18,7 @@ django-admin startproject mysite
 
 # after creating project verify django is installed correctly  
 python manage.py runserver
+
 # To create your app, make sure you’re in the same directory as **manage.py** and type this command:		
 python manage.py startapp <APPNAME>
 
@@ -19,20 +26,15 @@ python manage.py startapp <APPNAME>
 # Application definition
 # INSTALLED_APPS = [ <APPNAME> ]
 
-
-''' network '''
-# test django site on mobile device
-
-python manage.py runserver <localhost IP>:8000
-
 # create super user	
 python manage.py createsuperuser 
  
 # change password  
 python manage.py changepassword <user_name>
 
-# database migrations 
 
+
+# database migrations 
 python manage.py makemigrations <app_label>
 python manage.py showmigrations <app_label>
 # do I even needs this sqlmigrate command?
@@ -41,14 +43,15 @@ python manage.py sqlmigrate <app_label> <migration_name>
 python manage.py migrate <app_label> <migration_name>
 #example
 python manage.py migrate app 0001_initial
-	
-# Django Management Console	
+
+
+
+''' Django Management Console	'''
 # often requires these initital commands. 
 import django
 django.setup()	
 
 # model examples	
-
 class Artist (models.Model):
 	name = models.CharField("artist", max_length=50)
 	year_formed = models.PositiveIntegerField()
