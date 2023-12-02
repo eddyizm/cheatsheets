@@ -1,3 +1,6 @@
+# set index label when inserting to SQL 
+df.to_sql('Table Name', index=True, index_label='id' )
+
 # output to sqlite 
 import sqlalchemy
 db = sqlalchemy.create_engine('sqlite:///mydatabase.db')
