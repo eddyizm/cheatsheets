@@ -1,4 +1,6 @@
 ''' django notes '''
+# inspect existing db and extract models
+python manage.py inspectdb > test_models.py
 
 # django orm - filter by boolean field
 files = MyModel.objects.filter(downloaded=False)
