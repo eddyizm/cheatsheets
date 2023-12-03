@@ -357,7 +357,7 @@ filter = dataframe["Team"]=="Atlanta Hawks"
 dataframe.where(filter, inplace = True) 
 
 # break into chunks
- reader = pd.read_sql(SQL, cnx, chunksize=100) # coerce_float=False,
- for chunk in reader:
+reader = pd.read_sql(SQL, cnx, chunksize=100) # coerce_float=False,
+for chunk in reader:
     chunk.to_sql(table_name, index=False)
     # df.append(chunk, ignore_index=True,)
