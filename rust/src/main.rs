@@ -9,12 +9,15 @@
 // mod result_sample;
 // mod vector_sample;
 // mod ownership_example;
-mod lifetimes_sample;
-
+// mod lifetimes_sample;
+// mod generic_dtypes;
+mod derived_trait;
 
 fn main(){
-
-    lifetimes_sample::lifetime_main();
+    derived_trait::main();
+    // generic_dtypes::trait_sample();
+    // generic_dtypes::generic_data_types();
+    // lifetimes_sample::lifetime_main();
     // ownership_example::annotated_lifetimes_in_types();
     // vector_sample::main_vector();
     // result_sample::main_division_example()
