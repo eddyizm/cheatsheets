@@ -20,14 +20,14 @@ sudo apt purge --autoremove ubuntu-desktop
 
 # new debian set up scripts
 
-    sudo apt-get install openssh-server docker.io tmux htop  curl  firefox-esr -Y
-    
-    # without desktop     
-    apt install lightdm i3
-    
-    sudo apt-get install openssh-server docker.io tmux htop  curl  firefox-esr rsync python3-venv -Y
-	# not sure why but this isn't on all installs?
-	sudo apt install systemd-timesyncd
+sudo apt-get install openssh-server docker.io tmux htop  curl  firefox-esr -Y
+
+# without desktop     
+apt install lightdm i3
+
+sudo apt-get install openssh-server docker.io tmux htop  curl  firefox-esr rsync python3-venv -Y
+# not sure why but this isn't on all installs?
+sudo apt install systemd-timesyncd
 
 # check free memory 
 free -hw
