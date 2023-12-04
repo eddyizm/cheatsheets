@@ -13,10 +13,12 @@
 // mod generic_dtypes;
 // mod derived_trait;
 // mod trait_bounds;
-mod own_iterator;
+// mod own_iterator;
+mod generic_impl;
 
 fn main(){
-    own_iterator::main();
+    generic_impl::main();
+    // own_iterator::main();
     // trait_bounds::main()
     // derived_trait::main();
     // generic_dtypes::trait_sample();
