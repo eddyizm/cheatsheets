@@ -11,10 +11,12 @@
 // mod ownership_example;
 // mod lifetimes_sample;
 // mod generic_dtypes;
-mod derived_trait;
+// mod derived_trait;
+mod trait_bounds;
 
 fn main(){
-    derived_trait::main();
+    trait_bounds::main()
+    // derived_trait::main();
     // generic_dtypes::trait_sample();
     // generic_dtypes::generic_data_types();
     // lifetimes_sample::lifetime_main();
