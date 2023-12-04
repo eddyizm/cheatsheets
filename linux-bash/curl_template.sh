@@ -11,6 +11,7 @@ curl http://some.url --output some.file
 
 # get http response code  
 
+# use tag -L to follor redirects
 curl -IL https://eddyizm.com  
 
 curl -IL https://eddyizm.com | grep -i http
