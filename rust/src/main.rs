@@ -14,10 +14,11 @@
 // mod derived_trait;
 // mod trait_bounds;
 // mod own_iterator;
-mod generic_impl;
-
+// mod generic_impl;
+mod iter_impliment;
 fn main(){
-    generic_impl::main();
+    iter_impliment::main();
+    // generic_impl::main();
     // own_iterator::main();
     // trait_bounds::main()
     // derived_trait::main();
