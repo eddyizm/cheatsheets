@@ -12,10 +12,12 @@
 // mod lifetimes_sample;
 // mod generic_dtypes;
 // mod derived_trait;
-mod trait_bounds;
+// mod trait_bounds;
+mod own_iterator;
 
 fn main(){
-    trait_bounds::main()
+    own_iterator::main();
+    // trait_bounds::main()
     // derived_trait::main();
     // generic_dtypes::trait_sample();
     // generic_dtypes::generic_data_types();
