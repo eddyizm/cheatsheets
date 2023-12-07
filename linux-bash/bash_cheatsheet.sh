@@ -58,53 +58,61 @@ to select pages  add these args
     gpg -d -o decrypted_file.txt 
     
 ### tailscale 
+# install on debian buster
 
-install on debian buster
+
+curl -fsSL https://pkgs.tailscale.com/stable/debian/bullseye.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
+curl -fsSL https://pkgs.tailscale.com/stable/debian/bullseye.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list
+
+sudo apt-get update
+sudo apt-get install tailscale
+
+sudo tailscale up
+
+# You’re connected! You can find your Tailscale IPv4 address by running:
+
+tailscale ip -4
 
 
-        curl -fsSL https://pkgs.tailscale.com/stable/debian/bullseye.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
-        curl -fsSL https://pkgs.tailscale.com/stable/debian/bullseye.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list
-        
-        sudo apt-get update
-        sudo apt-get install tailscale
-        
-        sudo tailscale up
-
-        # You’re connected! You can find your Tailscale IPv4 address by running:
-
-        tailscale ip -4
-
-    
 ### fail2ban 
+# install
+sudo apt install fail2ban
 
-	sudo fail2ban-client status
+# check status
+systemctl status fail2ban.service
+sudo fail2ban-client status
 
-	Status
-	|- Number of jail:      8
-	- Jail list:   apache-auth, apache-badbots, apache-botsearch, apache-fakegooglebot, apache-modsecurity, apache-overflows, apache-shellshock, ssh
+# if off, enable
+
+$ Status
+$ |- Number of jail:      8
+$ - Jail list:   apache-auth, apache-badbots, apache-botsearch, apache-fakegooglebot, apache-modsecurity, apache-overflows, apache-shellshock, ssh
+
+
+# set up jail 
+cd /etc/fail2ban
 
 ## check status of particular guard
 
-	sudo fail2ban-client status apache-auth
+sudo fail2ban-client status apache-auth
 
-	Status for the jail: apache-auth
-	|- Filter
-	|  |- Currently failed: 0
-	|  |- Total failed:     0
-	|  `- File list:        /var/log/apache2/error.log`
-	 - Actions
-	   |- Currently banned: 0
-	   |- Total banned:     0
-	   `- Banned IP list:`
+Status for the jail: apache-auth
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed:     0
+|  `- File list:        /var/log/apache2/error.log`
+    - Actions
+    |- Currently banned: 0
+    |- Total banned:     0
+    `- Banned IP list:`
 
 # ban manually
-	sudo fail2ban-client set sshd banip 23.34.45.56
+sudo fail2ban-client set sshd banip 23.34.45.56
 
 # create copy of config to local then edit local
-    
-	sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
-	sudo nano /etc/fail2ban/jail.local
+sudo nano /etc/fail2ban/jail.local
 
 
 ### get # day of the week 
