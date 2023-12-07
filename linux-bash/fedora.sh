@@ -20,3 +20,12 @@ firewall-cmd --add-masquerade
 
 # make settings persistent
 firewall-cmd --runtime-to-permanent
+
+# oracle cloud specific issues #
+# For 80 HTTP
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+sudo netfilter-persistent save
+
+# For 443 HTTPS
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT
+sudo netfilter-persistent save
