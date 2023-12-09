@@ -29,3 +29,8 @@ sudo netfilter-persistent save
 # For 443 HTTPS
 sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 443 -j ACCEPT
 sudo netfilter-persistent save
+
+# fail2ban setup
+# more oracle bullshit 
+# dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
+sudo dnf install fail2ban
