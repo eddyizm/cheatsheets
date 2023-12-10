@@ -82,18 +82,16 @@ sudo apt install fail2ban
 systemctl status fail2ban.service
 sudo fail2ban-client status
 
-# if off, enable
+# create copy of config to local then edit local
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 
-$ Status
-$ |- Number of jail:      8
-$ - Jail list:   apache-auth, apache-badbots, apache-botsearch, apache-fakegooglebot, apache-modsecurity, apache-overflows, apache-shellshock, ssh
-
+sudo nano /etc/fail2ban/jail.local
+# activate jail, set backend, set ban parameters, findtime and maxretry
 
 # set up jail 
 cd /etc/fail2ban
 
 ## check status of particular guard
-
 sudo fail2ban-client status apache-auth
 
 Status for the jail: apache-auth
@@ -108,12 +106,6 @@ Status for the jail: apache-auth
 
 # ban manually
 sudo fail2ban-client set sshd banip 23.34.45.56
-
-# create copy of config to local then edit local
-sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-
-sudo nano /etc/fail2ban/jail.local
-
 
 ### get # day of the week 
 
