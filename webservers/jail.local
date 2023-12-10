@@ -1,0 +1,8 @@
+# /etc/fail2ban/jail.local:
+[caddy-4xx]
+port    = http,https
+logpath = /var/log/caddy/access.log
+enabled = true
+banTime = 3600
+findTime = 600
+maxretry = 5
