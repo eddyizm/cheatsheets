@@ -107,6 +107,9 @@ Status for the jail: apache-auth
 # ban manually
 sudo fail2ban-client set sshd banip 23.34.45.56
 
+# whitelist 
+ignoreip = 192.168.10.100 192.168.2.0/32
+
 ### get # day of the week 
 
     DOW=$(date +%u)
