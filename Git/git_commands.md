@@ -24,7 +24,7 @@
 ### Add remote from original repository in your forked repository:
 
     # list current remotes  
-    git remove -v
+    git remote -v
     
     git remote add upstream git://github.com/ORIGINAL-DEV-USERNAME/REPO-YOU-FORKED-FROM.git
     # sample
