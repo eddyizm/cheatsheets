@@ -44,6 +44,7 @@
     git fetch upstream
     git checkout main
     git reset --hard upstream/main 
+	git push origin main --force 
 
 ### issues when creating local git and then merging with a repo online. this command saved my life
 
