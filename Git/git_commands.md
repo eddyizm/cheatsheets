@@ -39,6 +39,12 @@
 
       git pull upstream master
     
+### reset fork to upstream main
+
+    git fetch upstream
+    git checkout main
+    git reset --hard upstream/main 
+
 ### issues when creating local git and then merging with a repo online. this command saved my life
 
 	git push -u origin master --allow-unrelated-histories
