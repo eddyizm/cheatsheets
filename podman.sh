@@ -22,3 +22,7 @@ podman pod create --name=<POD_NAME>
 
 docker.io/nginx:latest  
 
+# set up ms sql server 
+podman volume create sqlserver_dbdata
+
+podman run -u root -v sqlserver_dbdata:/var/opt/mssql/data -p 1433:1433 -e ACCEPT_EULA=Y -e SA_PASSWORD=StrongPassw0rd! mcr.microsoft.com/mssql/server:2019-latest
