@@ -216,6 +216,9 @@ git push origin master
     git reset --soft HEAD~1
     git reset HEAD path/to/unwanted_file(s)
     git commit -c ORIG_HEAD  # or just a regular commit
+
+### a hard REVERT to clean anything not yet pushed and unsaved work. BE WEARY!  
+	git reset --hard HEAD^
 	
 ### Generate GPG Key 
 
