@@ -1,5 +1,8 @@
 ### mac os specific commands
 
+# enable sshd  
+sudo systemsetup -setremotelogin on 
+
 # list updates available
 softwareupdate -l
 
