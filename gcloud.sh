@@ -15,3 +15,4 @@ gcloud compute scp --recurse instance-1:/etc/media %userprofile%/HP/backups/data
 
 # copying files from local to vm  
 gcloud compute scp [LOCAL_FILE_PATH] [INSTANCE_NAME]:~/[remote path]]
+    
