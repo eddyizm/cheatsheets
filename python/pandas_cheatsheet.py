@@ -194,6 +194,9 @@ data_frame_trimmed = data_frame.apply(lambda x: x.str.strip()   x.dtype == "obje
 # group by with multiple aggregations, sum and count 
 groupedby = df.groupby(['MainKey','SubKey','SortDate']).agg({'Subkey': 'count', 'Amount': 'sum'})
 
+# group by to find max value
+max_group = df.groupby(by='GroupByHeader', as_index=False).max().sort_values(by='SortBy', ascending=False)
+
 # pandas data frame to html 
 dataframe.to_html()
 
