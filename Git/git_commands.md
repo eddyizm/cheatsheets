@@ -61,7 +61,12 @@
 ### check history
 
     git log
-    
+
+### show commit history  
+
+    git show <commit-id>
+
+
 ### check changes before adding
 
 	git diff file.txt
