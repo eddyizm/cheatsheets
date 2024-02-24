@@ -46,6 +46,14 @@
     git reset --hard upstream/main 
 	git push origin main --force 
 
+### pull down forks PR branches  
+
+    git fetch upstream pull/42/head
+    # Then you can merge, cherry-pick etc. these PR changes.
+    # or pull directly
+    git pull upstream pull/42/head
+    
+
 ### issues when creating local git and then merging with a repo online. this command saved my life
 
 	git push -u origin master --allow-unrelated-histories
@@ -65,7 +73,6 @@
 ### show commit history  
 
     git show <commit-id>
-
 
 ### check changes before adding
 
