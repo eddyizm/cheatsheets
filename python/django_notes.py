@@ -34,8 +34,6 @@ python manage.py createsuperuser
 # change password  
 python manage.py changepassword <user_name>
 
-
-
 # database migrations 
 python manage.py makemigrations <app_label>
 python manage.py showmigrations <app_label>
@@ -46,6 +44,19 @@ python manage.py migrate <app_label> <migration_name>
 #example
 python manage.py migrate app 0001_initial
 
+## prod gunicorn deployment
+# django set up gunicorn
+pip install gunicorn
+
+# create file
+# /path/to/proj/gunicorn.conf.py
+
+### contents below ###
+# bind = "0.0.0.0:8000"
+# workers = 4
+# keepalive = 5
+
+# wsgi_app = "my-django-main-app.wsgi"  # replace with your main app (contains wsgi.py)
 
 
 ''' Django Management Console	'''
