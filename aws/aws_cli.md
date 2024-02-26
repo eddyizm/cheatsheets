@@ -56,6 +56,16 @@ aws s3 rb --force s3://[old-bucket]
 ```
 aws s3 mv s3://mybucket/test.txt s3://mybucket2/  
 ``` 
+### get summary information 
+
+`aws s3 ls s3://bucket/ --human-readable --summarize`
+
+### same but recursively
+
+`aws s3 ls s3://bucket/ --human-readable --recursive --summarize`
+
+Piping it out to sed to make the file pipe delimited and into a csv for easier analysis
+`sed "s/ /\|/g" | sed "s/||||/\|/g" | sed "s/|||/\|/g" | sed "s/||/\|/g" > results.csv`
 
 ## DynamoDB 
 ---
