@@ -301,3 +301,27 @@ do
 done
 
 # You can access them using echo "${arr[0]}", "${arr[1]}" also
+
+### cli image (imagemagick) editing ###
+
+sudo apt-get install imagemagick
+# mogrify overwrites original image
+mogrify -resize 50% *.png      # keep image aspect ratio
+mogrify -resize 320x240 *.png  # keep image aspect ratio
+mogrify -resize 320x240! *.png # don't keep image aspect ratio
+mogrify -resize x240 *.png     # don't keep image aspect ratio
+mogrify -resize 320x *.png     # don't keep image aspect ratio
+
+# resize image
+convert -resize 50% myfigure.png myfigure.jpg
+convert myfigure.png -resize 200x100 myfigure.jpg
+
+# loop through directory of files  
+for img in *.jpg; do
+  convert -resize 20% "$img" "opt-$img"
+done
+
+# padding images and squaring them with white background  
+
+convert -background white -gravity center   \
+     DSC00449.jpg -resize 1000x1000 -extent 1000x1000 result.jpg
