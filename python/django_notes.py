@@ -1,12 +1,4 @@
 ''' django notes '''
-# inspect existing db and extract models
-python manage.py inspectdb > test_models.py
-
-# django orm - filter by boolean field
-files = MyModel.objects.filter(downloaded=False)
-
-# update field in record  
-MyModel.objects.filter(pk=some_value).update(field1='some value')
 
 
 ''' Set up '''
@@ -34,7 +26,7 @@ python manage.py createsuperuser
 # change password  
 python manage.py changepassword <user_name>
 
-# database migrations 
+''' database migrations '''
 python manage.py makemigrations <app_label>
 python manage.py showmigrations <app_label>
 # do I even needs this sqlmigrate command?
@@ -43,6 +35,10 @@ python manage.py sqlmigrate <app_label> <migration_name>
 python manage.py migrate <app_label> <migration_name>
 #example
 python manage.py migrate app 0001_initial
+
+# inspect existing db and extract models
+python manage.py inspectdb > test_models.py
+
 
 ## prod gunicorn deployment
 # django set up gunicorn
@@ -64,7 +60,8 @@ pip install gunicorn
 import django
 django.setup()	
 
-# model examples	
+# Models
+
 class Artist (models.Model):
 	name = models.CharField("artist", max_length=50)
 	year_formed = models.PositiveIntegerField()
@@ -73,12 +70,16 @@ class Album (models.Model):
 	name = models.CharField("album", max_length=50)
 	artist = models.ForeignKey(Artist)
 
+# sub class to model for text choices
+class ParentModel(models.Model):
+	class Months(models.TextChoices):
+	 # Actual value ↓      # ↓ Displayed on Django Admin  
+		JANUARY = 'JAN', 'January'
+		FEBRUARY = 'FEB', 'February'
+		MARCH = 'MAR', 'March'
+		APRIL = 'APR', 'April'
+		MAY = 'MAY', 'May'
 
-# Link to anchor on another page  
-<a href="{% url 'anotherpage' %}#show">Page URL to show directly. </a>
-
-# redirect on root 
-from django.shortcuts import redirect
 
 urlpatterns = [
     path('', lambda req: redirect('/myapp/')),
@@ -86,21 +87,33 @@ urlpatterns = [
     path('myapp/', include('myapp.urls'))
 ]
 
-# sqlite manipulation
+
+''' Default Models
+	password, 
+	last_login, 
+	is_superuser, 
+	username, 
+	first_name, 
+	last_name, email, 
+	is_staff, 
+	is_active, 
+	date_joined
+''' 
+
+# ORM 
+# django orm - filter by boolean field
+files = MyModel.objects.filter(downloaded=False)
+
+# update field in record  
+MyModel.objects.filter(pk=some_value).update(field1='some value')
 
 # delete table records
 def delete_everything(self):
 	Reporter.objects.all().delete()
 
 
-''' Default Models
-password, 
-last_login, 
-is_superuser, 
-username, 
-first_name, 
-last_name, email, 
-is_staff, 
-is_active, 
-date_joined
-''' 
+# Link to anchor on another page  
+<a href="{% url 'anotherpage' %}#show">Page URL to show directly. </a>
+
+# redirect on root 
+from django.shortcuts import redirect
