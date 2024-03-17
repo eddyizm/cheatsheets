@@ -1,5 +1,15 @@
 ''' django notes '''
 
+''' Forms ''' 
+
+# change field name on form from model form
+
+class PostForm(ModelForm):
+	class Meta:
+		labels = {
+			"video": "embed"
+		}
+
 
 ''' Set up '''
 
