@@ -325,3 +325,7 @@ done
 
 convert -background white -gravity center   \
      DSC00449.jpg -resize 1000x1000 -extent 1000x1000 result.jpg
+
+# create large dummy file fast
+ dd if=/dev/urandom of=random.img count=1024 bs=10M  # 1024 = 10GB
+ 
