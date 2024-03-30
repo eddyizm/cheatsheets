@@ -1,5 +1,8 @@
 ''' django notes '''
 
+# access django shell 
+./manage.py shell
+
 ''' Forms ''' 
 
 # change field name on form from model form
