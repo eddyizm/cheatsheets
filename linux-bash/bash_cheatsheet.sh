@@ -1,5 +1,9 @@
 #!/bin/bash
 
+### reverse string 
+[user@linux ~]$ echo tributum | rev
+mutubirt
+
 ### display colours in terminal
 for i in {0..255} ; do
     printf "\x1b[38;5;${i}mcolour${i}\n"
