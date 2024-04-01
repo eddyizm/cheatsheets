@@ -23,11 +23,10 @@
 
 	npm install -g @angular/cli  
 
-## Create initial framework  
+### Create initial framework  
 	
 	ng new my-app  
   	# this takes a long fucking time
-    
 
 For future app creation 
 
@@ -36,7 +35,10 @@ ng new myProject --skip-install=true
 cd myProject
 npm install
 ```
+    
+### Serve demo via ngrok 
 
+`ng serve --disable-host-check`
 
 Run the app	
 
