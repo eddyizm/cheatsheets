@@ -25,7 +25,7 @@ docker.io/nginx:latest
 # set up ms sql server 
 podman volume create sqlserver_dbdata
 
-podman run -u root -v sqlserver_dbdata:/var/opt/mssql/data -p 1433:1433 -e ACCEPT_EULA=Y -e SA_PASSWORD=StrongPassw0rd! mcr.microsoft.com/mssql/server:2019-latest
+podman run -d -u root -v sqlserver_dbdata:/var/opt/mssql/data -p 1433:1433 -e ACCEPT_EULA=Y -e SA_PASSWORD=StrongPassw0rd! mcr.microsoft.com/mssql/server:2019-latest
 
 # set up systemd services to start rootless containers on boot. 
 podman generate systemd --new --name CONTAINER_NAME -f # if you have a pod, you can use the pod here and it will generate all your files
