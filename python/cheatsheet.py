@@ -1,3 +1,7 @@
+# create text file in memory
+import io
+f = io.StringIO("some initial text data")
+
 # read csv and add quotes to standard out on the cli. 
 QUOTE_CSV_PY="import sys; import csv; csv.writer(sys.stdout, quoting=csv.QUOTE_ALL, quotechar='\"').writerows(csv.reader(sys.stdin))"
 python -c "$QUOTE_CSV_PY" < file
