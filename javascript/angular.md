@@ -68,6 +68,7 @@ Generate Service
 
 	ng generate service <SERVICENAME> (--skipTests=true ) to not generate a spec file
 	# short 
+	ng g s services/<SERVICE_NAME> 
 
 Add styling  (in this case using [nebular](https://akveo.github.io/nebular/))   
 
