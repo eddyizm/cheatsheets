@@ -173,4 +173,20 @@ After retrieving a message, delete the message from queue using the receipt hand
 ```  
 aws sqs delete-message --queue-url https://sqs.us-east-1.amazonaws.com/80398EXAMPLE/MyQueue --receipt-handle <RECEIPT HANDLE>
 ```  
+## SMS  
+
+put parameter
+```
+aws ssm put-parameter \
+    --region ap-southeast-1 \
+    --name GPG_PRIVATE_KEY \
+    --type SecureString \
+    --value file://my_github_private.key
+```
+get parameter
+```
+aws ssm get-parameter \
+    --name /<name_or_path_of_param/my_github_private
+```
+
 
