@@ -1,3 +1,9 @@
+# pyspark read s3/csv
+spark.read.csv(
+    "some_input_file.csv", 
+    header=True
+)
+
 # set index label when inserting to SQL 
 df.to_sql('Table Name', index=True, index_label='id' )
 
