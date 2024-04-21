@@ -1,5 +1,8 @@
 // Javascript Cheatsheet. 
 
+// sleep
+await new Promise(resolve => setTimeout(resolve, 3000)); // 3 sec
+
 // console log object to json
 // The third parameter passed will be the number of spaces to indent the members.
 var obj = {
