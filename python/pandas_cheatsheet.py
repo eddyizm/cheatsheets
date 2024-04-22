@@ -1,3 +1,6 @@
+# pyspark write to parquet format
+df.write.parquet("s3://bucket/path/test.parquet",mode="overwrite")
+
 # pyspark read s3/csv
 spark.read.csv(
     "some_input_file.csv", 
