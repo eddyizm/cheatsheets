@@ -1,3 +1,7 @@
+# pyspark add timestamp field
+from pyspark.sql.functions import to_timestamp
+df = df.withColumn("current_timestamp", current_timestamp())
+
 # pyspark drop a column
 df.drop(df.firstname)
 
