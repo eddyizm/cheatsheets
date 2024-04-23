@@ -1,5 +1,8 @@
 #!/bin/bash
 
+### replace character in string (nice for changing delimiter in headers)
+echo "$string" | tr xyz _ # where every instance of xyz is replaced with _
+
 ### reverse string 
 [user@linux ~]$ echo tributum | rev
 mutubirt
