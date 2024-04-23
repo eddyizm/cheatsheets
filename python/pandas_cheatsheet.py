@@ -1,3 +1,6 @@
+# pyspark drop a column
+df.drop(df.firstname)
+
 # pyspark write to parquet format
 df.write.parquet("s3://bucket/path/test.parquet",mode="overwrite")
 
