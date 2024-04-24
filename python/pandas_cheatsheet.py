@@ -1,3 +1,7 @@
+# pyspark specify delimiter
+df2 = spark.read.option("delimiter", ";").csv(path)
+df2 = spark.read.csv(path, sep='|')
+
 # pyspark add timestamp field
 from pyspark.sql.functions import to_timestamp
 df = df.withColumn("current_timestamp", current_timestamp())
