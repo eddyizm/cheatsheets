@@ -1,3 +1,7 @@
+# pyspark concat columns
+from pyspark.sql.functions import lit
+df_new = df.withColumn('full_name', concat(df.first_name, lit(' '), df.last_name))
+
 # pyspark specify delimiter
 df2 = spark.read.option("delimiter", ";").csv(path)
 df2 = spark.read.csv(path, sep='|')
