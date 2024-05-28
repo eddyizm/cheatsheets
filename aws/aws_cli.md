@@ -173,7 +173,37 @@ After retrieving a message, delete the message from queue using the receipt hand
 ```  
 aws sqs delete-message --queue-url https://sqs.us-east-1.amazonaws.com/80398EXAMPLE/MyQueue --receipt-handle <RECEIPT HANDLE>
 ```  
-## SMS  
+## Glue 
+
+aws classifier (used with crawler)
+
+```
+aws glue create-classifier \
+    --csv-classifier '{
+        "Name": "custom-pipe-classifier",
+        "Delimiter": "|",
+        "QuoteSymbol": "\"",
+        "ContainsHeader": "UNKNOWN"
+    }'
+```
+
+Create crawler
+```
+aws glue create-crawler \
+--name "dev-crawler" \
+--role "<ARN ROLE>" \
+--database-name "<DB NAME>" \
+--targets 'S3Targets=[{Path="s3://<FULL S3 PATH"}]' \
+--classifiers "custom-pipe-classifier" \
+--configuration '{"Version": 1.0, "CrawlerOutput": {"Partitions": {"AddOrUpdateBehavior": "InheritFromTable"}, "Tables": {"AddOrUpdateBehavior": "MergeNewColumns"}}, "Grouping": {"TableLevelConfiguration": 5}}'      
+```
+
+then run  
+```
+aws glue start-crawler --name dev-crawler
+```
+
+## SSM  
 
 put parameter
 ```
