@@ -9,8 +9,11 @@ netsh interface portproxy add v4tov4 listenport=<external_port> listenaddress=<0
 netsh interface portproxy show all
 
 # to remove proxy
-netsh interface portproxy delete v4tov4 \ listenport=<external_port> \ listenaddress=<0.0.0.0 \
+netsh interface portproxy delete v4tov4 \
+listenport=<host_port> \
+listenaddress=<0.0.0.0 \
 protocol=tcp
+
 # setting up on oracle fedora linux 
 sudo yum install podman  
 
