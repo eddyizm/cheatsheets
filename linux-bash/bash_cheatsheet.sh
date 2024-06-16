@@ -221,6 +221,9 @@ tar czf myfiles.tar.gz mydirectory/
 # unpack tar files 
 tar –xvf documents.tar -C Folder
 
+# tar and max compress
+tar cvf - FILE.VDI | gzip -9 - > FILE.VDI.tar.gz
+
 #!/usr/bin/env bash read N lines of end of file and output
 tail --lines=60 /C/Users/eddyizm/Source/Repos/seleniumTesting/env/log.txt > "/C/Users/eddyizm/Documents/My Dropbox/Dropbox/Apps/log.txt"
 
