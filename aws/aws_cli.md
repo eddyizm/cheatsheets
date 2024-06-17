@@ -13,6 +13,9 @@ aws s3api create-bucket \
 
 `aws s3 cp s3://bucket/folder/file.txt .`
 
+### sync using filters  
+`aws s3 sync s3://my-bucket/ ./csv_files/ --exclude "*" --include "*.csv"`
+
 ### copy item from local to s3  
 
 `aws s3 cp ./localfile.txt s3://bucket/`
