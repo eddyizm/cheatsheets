@@ -1,5 +1,18 @@
 #!/bin/bash
 
+### extend or change swapfile 
+
+# first turn it off
+sudo swapoff /.swapfile 
+# then increase by 1gb
+sudo dd if=/dev/zero of=/.swapfile bs=1M count=1024 oflag=append conv=notrunc
+
+# set it as the new swap file
+sudo mkswap /.swapfile
+
+# turn it back on
+sudo swapon /.swapfile
+
 ### replace character in string (nice for changing delimiter in headers)
 echo "$string" | tr xyz _ # where every instance of xyz is replaced with _
 
