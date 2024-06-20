@@ -1,7 +1,9 @@
 #!/bin/bash
 
-### extend or change swapfile 
+# get string length with expr
+expr length "Hello World"
 
+### extend or change swapfile
 # first turn it off
 sudo swapoff /.swapfile 
 # then increase by 1gb
