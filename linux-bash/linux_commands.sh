@@ -1,5 +1,10 @@
 # Linux Commands
----
+---  
+# get length of string
+1. ${#my_string}
+2. expr length "my string"
+3. length=$(expr length "$str")
+
 # list running systemd services 
 systemctl --user --type=service --state=running
 
