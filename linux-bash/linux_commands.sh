@@ -1,5 +1,9 @@
 # Linux Commands
 ---  
+# insert first string to first line of file using sed
+header='this|is|my|new|header|row' 
+sed -i "1i $header" downloaded.txt
+
 # get length of string
 1. ${#my_string}
 2. expr length "my string"
