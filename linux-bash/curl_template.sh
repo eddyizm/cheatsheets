@@ -16,3 +16,5 @@ curl -IL https://eddyizm.com
 
 curl -IL https://eddyizm.com | grep -i http
  
+# specify post, sending no data.
+curl -v -X POST https://example.com/api/v1/mydata/
