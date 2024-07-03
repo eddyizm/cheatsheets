@@ -1,0 +1,3 @@
+syntax on
+colorscheme slate
+
