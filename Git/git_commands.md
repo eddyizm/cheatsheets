@@ -82,6 +82,23 @@
 
 	git diff --cached file.txt
     
+
+### show tags  
+
+    git tag  
+
+### tag release  
+
+    git tag -a v0.2.4 -m "Cache fixes 0.2.4"  
+
+### share single tag  
+
+    git push origin v0.2.4
+
+### share multiple tags  
+
+    git push origin --tags  
+
 ### clone existing repo
 
     git clone <yourrepoURL>
