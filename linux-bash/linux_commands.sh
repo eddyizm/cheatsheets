@@ -105,7 +105,7 @@ Ctrl+b :
 # after entering prompt  
 :resize-pane -D 10 (Resizes the current pane down by ten cells)
 
-### IO redirection  
+# IO redirection  
 cmd < file
 # input of cmd from file
 cmd1 <(cmd2)
@@ -120,5 +120,7 @@ cmd 1>&2
 # stdout to same place as stderr
 cmd 2>&1
 # stderr to same place as stdout
-cmd &> file
-# every output of cmd to file
+
+cmd &> file # every output of cmd to file
+
+cmd >>file.txt 2>&1 #append stdout/stderr
