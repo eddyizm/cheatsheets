@@ -134,8 +134,8 @@ ignoreip = 192.168.10.100 192.168.2.0/32
 
 ### get # day of the week 
 
-    DOW=$(date +%u)
-    echo $DOW
+DOW=$(date +%u)
+echo $DOW
 
 ### view full date time stamp
 
@@ -151,19 +151,19 @@ date -s '2022-11-12 15:27:00'
 
 date --set="Sat Nov 12 19:27:00 2022"
 
-### count words or lines in file
+# get yesterday date
+yesterday=$(date -I -d '-1 day')
 
-    wc -l myfile.sh.
-    wc -w myfile.sh.
+# count words or lines in file
 
-### Set environment variable system wide
+wc -l myfile.sh.
+wc -w myfile.sh.
 
-    add line to 
-    /etc/environment
-    
-    MY_SECRET=password
-    
-    source /etc/environment
+# Set environment variable system wide
+# add line to /etc/environment
+
+MY_SECRET=password
+source /etc/environment
 
 # clone permissions 
 
