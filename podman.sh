@@ -43,3 +43,31 @@ systemctl --user status SERVICE_NAME.service
 # failed is ok, delete current containers and then reboot.
 sudo loginctl enable-linger $USER
 # should be golden!
+
+# get real ip from rootless containers using slirp4netns
+ip a # shows only real network
+# to find the tap0 interface or virtual device there
+$ ps -ef | grep slirp
+
+localus+    2333       1  0 13:50 pts/0    00:00:00 /usr/bin/slirp4netns --disable-host-loopback --mtu=65520 --enable-sandbox --enable-seccomp -c -e 3 -r 4 --netns-type=path /run/user/1000/netns/cni-a1f72a2b-46f5-175d-67cc-e914c6e361be tap0
+localus+    2583       1  0 13:50 pts/0    00:00:00 /usr/bin/slirp4netns --disable-host-loopback --mtu=65520 --enable-sandbox --enable-seccomp -c -r 3 --netns-type=path /run/user/1000/netns/rootless-cni-ns tap0
+localus+    4176    1500  0 14:10 pts/0    00:00:00 grep --color=auto slirp
+
+$ podman unshare nsenter --net=/run/user/1000/netns/cni-a1f72a2b-46f5-175d-67cc-e914c6e361be
+
+# ip a
+# how shows the tap0 interface
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: tap0: <BROADCAST,UP,LOWER_UP> mtu 65520 qdisc fq_codel state UNKNOWN group default qlen 1000
+    link/ether f6:1a:cf:db:97:6b brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.100/24 brd 10.0.2.255 scope global tap0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::f41a:cfff:fedb:976b/64 scope link
+       valid_lft forever preferred_lft forever
+
+$ podman unshare nsenter --net=/run/user/1000/netns/rootless-cni-ns
