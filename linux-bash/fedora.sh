@@ -12,6 +12,9 @@ sudo dnf clean packages
 # redirect ports
 firewall-cmd --add-forward-port=port=80:proto=tcp:toport=8080
 
+# or remove forward/redirect 
+firewall-cmd --remove-forward-port=port=80:proto=tcp:toport=8080
+
 # list forwared ports
 firewall-cmd --list-forward-ports 
 
@@ -34,3 +37,19 @@ sudo netfilter-persistent save
 # more oracle bullshit 
 # dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 sudo dnf install fail2ban
+
+# install caddy webserver on Fedora or RHEL/CentOS 8
+dnf install 'dnf-command(copr)'
+dnf copr enable @caddy/caddy
+dnf install caddy
+
+# set up caddy server
+sudo groupadd --system caddy
+
+sudo useradd --system \
+    --gid caddy \
+    --create-home \
+    --home-dir /var/lib/caddy \
+    --shell /usr/sbin/nologin \
+    --comment "Caddy web server" \
+    caddy
