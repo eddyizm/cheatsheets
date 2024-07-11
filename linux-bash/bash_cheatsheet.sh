@@ -224,6 +224,9 @@ fi
 # find files that start with numbers and strip the first 3 characters
 for file in [0-9]*.txt; do echo "${file:3}" ; done
 
+# search by more than one extension, eg wildcards
+ls *.{ext1,ext2}
+ 
 # c – creates a new archive
 # v – verbose, meaning it lists the files it includes
 # f – specifies the name of the file
