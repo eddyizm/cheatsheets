@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# count files in directory 
+ls -l | wc -l
+
 # get string length with expr
 expr length "Hello World"
 
