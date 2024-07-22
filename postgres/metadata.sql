@@ -1,3 +1,6 @@
+-- fix sequence keys
+SELECT setval('tablename_id_seq', (SELECT MAX(id) FROM tablename));
+
 -- show all foreign keys
 SELECT conrelid::regclass AS table_name, 
        conname AS foreign_key, 
