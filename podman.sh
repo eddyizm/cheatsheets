@@ -23,6 +23,9 @@ sudo pip3 install podman-compose
 # build a Dockerfile
 docker.io/
 
+# point to ignore file when using docker files
+podman build -t quote-app -f Dockerfile --ignorefile .dockerignore
+
 # create pod  
 podman pod create --name=<POD_NAME>
 
