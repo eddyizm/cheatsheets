@@ -45,32 +45,22 @@ free -hw
 Mem:          936Mi       279Mi       108Mi        10Mi       0.0Ki       549Mi       483Mi
 Swap:         1.8Gi       504Mi       1.3Gi
 
-## cloud flare 
-
-# set up cloudflare tunnels (ubuntu)
-
+## cloudflared tunnels 
 UBUNTU: 
-  
 $ echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/ focal main' |
 sudo tee /etc/apt/sources.list.d/cloudflare-main.list
 
-
 DEBIAN:
-
 echo 'deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/ buster main' |
 sudo tee /etc/apt/sources.list.d/cloudflare-main.list
 
-
-
-import gpg key: 
-  
+# import gpg key: 
 $ sudo curl https://pkg.cloudflare.com/cloudflare-main.gpg -o /usr/share/keyrings/cloudflare-main.gpg
-  
 
-update apt cache then install. 
+# update apt cache then install. 
 `sudo apt install cloudflared`
 
-authorize: 
+# authorize: 
 `cloudflared tunnel login`
 
 ---
