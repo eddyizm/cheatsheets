@@ -23,14 +23,19 @@ django-admin --version
 # create project  
 django-admin startproject mysite
 
+# makemigrations to get started
+python manage.py makemigrations 
+# then 
+python manage.py migrate
+
 # after creating project verify django is installed correctly  
 python manage.py runserver
 
 # To create your app, make sure you’re in the same directory as **manage.py** and type this command:		
 python manage.py startapp <APPNAME>
 
-# make sure to add the app to your settings file 
 # Application definition
+# make sure to add the app to your settings file 
 # INSTALLED_APPS = [ <APPNAME> ]
 
 # create super user	
