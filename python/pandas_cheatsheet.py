@@ -221,6 +221,9 @@ groupedby = df.groupby(['MainKey','SubKey','SortDate']).agg({'Subkey': 'count', 
 # group by to find max value
 max_group = df.groupby(by='GroupByHeader', as_index=False).max().sort_values(by='SortBy', ascending=False)
 
+# group by with size
+df.groupby(['col5', 'col2']).size()
+
 # pandas data frame to html 
 dataframe.to_html()
 
