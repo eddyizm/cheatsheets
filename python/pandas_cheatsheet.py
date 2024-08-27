@@ -46,6 +46,9 @@ pd.DataFrame([header_sample]).to_csv(csv_buffer, index=False, header=False, sep=
 # query rows where value equals, very sql like
 df = df.query('A == "foo"')
 
+# query and then sort
+df = df.query('A == "foo"').sort_values(by='id', ascending=False).reset_index(drop=True)
+
 # inner join on specified columns
 df3 = df3.merge(df2, on=['col1', 'col2'], how='inner')
 
