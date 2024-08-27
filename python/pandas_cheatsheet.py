@@ -227,6 +227,9 @@ max_group = df.groupby(by='GroupByHeader', as_index=False).max().sort_values(by=
 # group by with size
 df.groupby(['col5', 'col2']).size()
 
+# group by unique values, reset index
+df = df.groupby('id')['code'].unique().reset_index()
+
 # pandas data frame to html 
 dataframe.to_html()
 
