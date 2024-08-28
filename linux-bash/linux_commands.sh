@@ -3,6 +3,9 @@
 # play video with subtitles with ffplay (part of the ffmpeg library)
 ffplay -vf subtitles=$file -i $file
 
+# edit hosts file
+vi /etc/hosts
+
 # insert first string to first line of file using sed
 header='this|is|my|new|header|row' 
 sed -i "1i $header" downloaded.txt
