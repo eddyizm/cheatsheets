@@ -1,5 +1,8 @@
 # Linux Commands
 ---  
+# edit hosts file
+vi /etc/hosts
+
 # insert first string to first line of file using sed
 header='this|is|my|new|header|row' 
 sed -i "1i $header" downloaded.txt
