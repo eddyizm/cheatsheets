@@ -46,6 +46,9 @@ pd.DataFrame([header_sample]).to_csv(csv_buffer, index=False, header=False, sep=
 # query rows where value equals, very sql like
 df = df.query('A == "foo"')
 
+# query and then sort
+df = df.query('A == "foo"').sort_values(by='id', ascending=False).reset_index(drop=True)
+
 # inner join on specified columns
 df3 = df3.merge(df2, on=['col1', 'col2'], how='inner')
 
@@ -220,6 +223,12 @@ groupedby = df.groupby(['MainKey','SubKey','SortDate']).agg({'Subkey': 'count', 
 
 # group by to find max value
 max_group = df.groupby(by='GroupByHeader', as_index=False).max().sort_values(by='SortBy', ascending=False)
+
+# group by with size
+df.groupby(['col5', 'col2']).size()
+
+# group by unique values, reset index
+df = df.groupby('id')['code'].unique().reset_index()
 
 # pandas data frame to html 
 dataframe.to_html()

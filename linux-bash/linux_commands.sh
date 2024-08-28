@@ -1,5 +1,8 @@
 # Linux Commands
----  
+---
+# play video with subtitles with ffplay (part of the ffmpeg library)
+ffplay -vf subtitles=$file -i $file
+
 # edit hosts file
 vi /etc/hosts
 
