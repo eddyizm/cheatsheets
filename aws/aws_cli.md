@@ -10,15 +10,22 @@ aws s3api create-bucket \
 ```
 
 ### copy item from s3 to local
-
 `aws s3 cp s3://bucket/folder/file.txt .`
+
+### copy items from s3 to local recursively  
+`aws s3 cp --recursive s3://bucket/path/ ./`  
 
 ### sync using filters  
 `aws s3 sync s3://my-bucket/ ./csv_files/ --exclude "*" --include "*.csv"`
 
 ### copy item from local to s3  
-
 `aws s3 cp ./localfile.txt s3://bucket/`
+
+### copy all items from local to s3
+`aws s3 cp --recursive ./ s3://bucket/path/` 
+
+### copy all items from local to s3 recursively with a filter
+`aws s3 cp --recursive --exclude "*" --include "*.log" ./ s3://bucket/path/` 
 
 ### remove item from s3  
 
