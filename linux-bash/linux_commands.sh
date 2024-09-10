@@ -27,6 +27,9 @@ cat /etc/os-release
 # list disks available  
 fdisk -l
 
+# check disk health for errors
+sudo fsck  </dev/mount-point>
+
 # Generate ssh keys  
 ssh-keygen
 
