@@ -1,5 +1,9 @@
 # git 
 
+### turn on trace to debug issues  
+
+    GIT_TRACE=1 <git command>  
+
 ### Create new repo
 
 	git init
