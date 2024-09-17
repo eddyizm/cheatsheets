@@ -1,3 +1,6 @@
+# use set to verify all members in one list in exist in another larger set. 
+all_exist = set(smaller_list).issubset(larger_list)
+
 # prepend value to existing list  
 array.insert(0, value)
 
