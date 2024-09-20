@@ -168,8 +168,10 @@ wc -w myfile.sh.
 MY_SECRET=password
 source /etc/environment
 
-# clone permissions 
+# take ownership of files/directory
+sudo chown -R username:groupname  <directory>
 
+# clone permissions 
 chmod --reference=file1 file2
 chmod --reference=dir1 dir2
 
