@@ -1,5 +1,8 @@
 # Linux Commands
 ---
+# query directory for text in file 
+grep -Rnw '/path/to/somewhere/' -e 'pattern
+
 # play video with subtitles with ffplay (part of the ffmpeg library)
 ffplay -vf subtitles=$file -i $file
 
@@ -29,6 +32,9 @@ fdisk -l
 
 # check disk health for errors
 sudo fsck  </dev/mount-point>
+
+# mount via uuid  
+mount UUID=1234-SOME-UUID /some/mount/folder  
 
 # Generate ssh keys  
 ssh-keygen
