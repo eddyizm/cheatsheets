@@ -30,6 +30,9 @@ cat /etc/os-release
 # list disks available  
 fdisk -l
 
+# list disk by uuid
+ls -l /dev/disk/by-uuid
+
 # check disk health for errors
 sudo fsck  </dev/mount-point>
 
