@@ -244,6 +244,9 @@ tar czf myfiles.tar.gz mydirectory/
 # unpack tar files 
 tar –xvf documents.tar -C Folder
 
+# list tar file contents
+tar -tf archive.tar
+
 # tar and max compress
 tar cvf - FILE.VDI | gzip -9 - > FILE.VDI.tar.gz
 
