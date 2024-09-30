@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# write iso to usb with dd command
+sudo dd bs=4M if=/path/to/file.iso of=/dev/sdX status=progress oflag=sync
+
 # count files in directory 
 ls -l | wc -l
 
