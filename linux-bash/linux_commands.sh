@@ -33,8 +33,11 @@ fdisk -l
 # list disk by uuid
 ls -l /dev/disk/by-uuid
 
-# check disk health for errors
+# check disk health for errors (drive needs to be unmounted)
 sudo fsck  </dev/mount-point>
+
+# use mount to list information 
+mount -l -t vfat; mount -l -t ext4 
 
 # mount via uuid  
 mount UUID=1234-SOME-UUID /some/mount/folder  
