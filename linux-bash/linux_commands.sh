@@ -45,6 +45,12 @@ mount UUID=1234-SOME-UUID /some/mount/folder
 # Generate ssh keys  
 ssh-keygen
 
+# list ssh private key 
+ssh-add -l    
+
+# add ssh private key
+ssh-add ~/.ssh/<private key file>
+
 # remove gnome from ubuntu  
 sudo apt purge --autoremove ubuntu-desktop
 
