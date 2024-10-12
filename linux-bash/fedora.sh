@@ -1,3 +1,8 @@
+# check bios
+sudo dmidecode | grep -A3 'Vendor:\|Product:' && \
+    sudo lshw -C cpu | grep -A3 'product:\|vendor:'
+
+
 # check if firewall is installed and running
 systemctl status firewall
 
