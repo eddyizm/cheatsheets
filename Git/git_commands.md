@@ -65,7 +65,10 @@
 ### merge working/feature branch to master
     git checkout master
     git merge featureBranch
-    
+
+### abort merge before things go sideways  
+    git merge --abort
+
 ### push empty commit!  
 
     git commit --allow-empty -m "Trigger Build"
