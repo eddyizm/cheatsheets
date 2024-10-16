@@ -1,5 +1,8 @@
 # Linux Commands
 ---
+# check all versions of python  
+which -a python python3
+
 # query directory for text in file 
 grep -Rnw '/path/to/somewhere/' -e 'pattern
 
