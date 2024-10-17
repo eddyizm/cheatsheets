@@ -1,5 +1,7 @@
-# Linux Commands
----
+#!/bin/bash
+
+### Linux Commands
+
 # check all versions of python  
 which -a python python3
 
@@ -13,13 +15,13 @@ ffplay -vf subtitles=$file -i $file
 vi /etc/hosts
 
 # insert first string to first line of file using sed
-header='this|is|my|new|header|row' 
+header="this|is|my|new|header|row"
 sed -i "1i $header" downloaded.txt
 
 # get length of string
-1. ${#my_string}
-2. expr length "my string"
-3. length=$(expr length "$str")
+echo ${#my_string}
+echo expr length "my string"
+length=$(expr length "$str")
 
 # list running systemd services 
 systemctl --user --type=service --state=running
@@ -58,13 +60,13 @@ ssh-add ~/.ssh/<private key file>
 sudo apt purge --autoremove ubuntu-desktop
 
 # new debian set up scripts
-
 sudo apt-get install openssh-server docker.io tmux htop  curl  firefox-esr -Y
 
-# without desktop     
+# without desktop
 apt install lightdm i3
 
 sudo apt-get install openssh-server docker.io tmux htop  curl  firefox-esr rsync python3-venv -Y
+
 # not sure why but this isn't on all installs?
 sudo apt install systemd-timesyncd
 
