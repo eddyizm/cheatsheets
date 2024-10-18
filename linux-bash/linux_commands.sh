@@ -47,6 +47,10 @@ mount -l -t vfat; mount -l -t ext4
 # mount via uuid  
 mount UUID=1234-SOME-UUID /some/mount/folder  
 
+# mount a server share
+sudo mount -t cifs -o credentials=~/.credentials, uid=$(id -u),gid=$(id -g),forceuid,forcegid \
+    //<server.ip/<share.name/ /mnt/<mount.point>
+
 # Generate ssh keys  
 ssh-keygen
 
