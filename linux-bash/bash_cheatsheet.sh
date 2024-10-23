@@ -263,6 +263,9 @@ tail --lines=60 /C/Users/eddyizm/Source/Repos/seleniumTesting/env/log.txt > "/C/
 # rename files with pattern match 
 for file in *.mp4; do mv $file "${file/<SEARCH_TEXT>/<REPLACEMENT_TEXT>}"; done
 
+# rename files to lowercase
+for f in * ; do mv $f $(echo $f | tr A-Z a-z); done
+
 # rysnc back up folder *mirror*
 rsync -avr --delete /Directory1/ /Directory2/
 
