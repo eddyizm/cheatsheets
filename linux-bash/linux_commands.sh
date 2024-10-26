@@ -6,7 +6,7 @@
 which -a python python3
 
 # query directory for text in file 
-grep -Rnw '/path/to/somewhere/' -e 'pattern
+grep -Rnw '/path/to/somewhere/' -e 'pattern'
 
 # play video with subtitles with ffplay (part of the ffmpeg library)
 ffplay -vf subtitles=$file -i $file
@@ -64,12 +64,12 @@ ssh-add ~/.ssh/<private key file>
 sudo apt purge --autoremove ubuntu-desktop
 
 # new debian set up scripts
-sudo apt-get install openssh-server docker.io tmux htop  curl  firefox-esr -Y
+sudo apt-get install openssh-server podman tmux htop  curl  firefox-esr -Y
 
 # without desktop
 apt install lightdm i3
 
-sudo apt-get install openssh-server docker.io tmux htop  curl  firefox-esr rsync python3-venv -Y
+sudo apt-get install openssh-server podman tmux htop  curl  firefox-esr rsync python3-venv -Y
 
 # not sure why but this isn't on all installs?
 sudo apt install systemd-timesyncd
@@ -99,7 +99,6 @@ $ sudo curl https://pkg.cloudflare.com/cloudflare-main.gpg -o /usr/share/keyring
 # authorize: 
 `cloudflared tunnel login`
 
----
 ### tmux
 # List sessions
 tmux ls
