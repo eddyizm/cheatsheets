@@ -278,9 +278,12 @@ import os
 import pandas as pd
 
 for file in os.listdir('.'):
-   print (file)
-   xl = pd.ExcelFile(file)
-   print (xl.sheet_names)
+	print (file)
+	xl = pd.ExcelFile(file)
+	# get sheet names from excel file
+	sheet_names = xl.sheet_names)
+	# assign sheet to df 
+	 df = xl.parse(sheet_name)
 
 # read excel specific columns
 df = pd.read_excel(EXCEL, sheet_name = '<SheetName>', usecols = [ 'A', 'B' ] )
