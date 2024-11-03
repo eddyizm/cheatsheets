@@ -14,6 +14,9 @@ ffplay -vf subtitles=$file -i $file
 # convert wav to mp3
 ffmpeg -i $file -vn -ar 44100 -ac 2 -b:a 320k $file.mp3
 
+# encode to h.265
+ffmpeg -loglevel warning -hide_banner -stats -i $file -vcodec libx265 -crf 28 $file.mkv
+
 # edit hosts file
 vi /etc/hosts
 
