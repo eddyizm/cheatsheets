@@ -11,6 +11,9 @@ grep -Rnw '/path/to/somewhere/' -e 'pattern'
 # play video with subtitles with ffplay (part of the ffmpeg library)
 ffplay -vf subtitles=$file -i $file
 
+# convert wav to mp3
+ffmpeg -i $file -vn -ar 44100 -ac 2 -b:a 320k $file.mp3
+
 # edit hosts file
 vi /etc/hosts
 
@@ -32,9 +35,19 @@ lsb_release -a
 # get more details on os version
 cat /etc/os-release
 
+# hostname info  
+hostnamectl
+
 # list disks available  
 fdisk -l
 
+# find Linux kernel version
+uname -r
+
+# find screen resolution  
+
+xdpyinfo | grep dimensions
+        
 # list disk by uuid
 ls -l /dev/disk/by-uuid
 
@@ -99,6 +112,13 @@ $ sudo curl https://pkg.cloudflare.com/cloudflare-main.gpg -o /usr/share/keyring
 # authorize: 
 `cloudflared tunnel login`
 
+# combine pdf's
+pdfunite 
+# extract pdf to text
+pdftotext
+# keep layout
+pdftotext -layout input.pdf output.txt
+
 ### tmux
 # List sessions
 tmux ls
@@ -150,44 +170,3 @@ cmd &> file # every output of cmd to file
 
 cmd >>file.txt 2>&1 #append stdout/stderr
 
-
-### Raspbery pi  
-
-# install kodi on pi   
-sudo apt install kodi
-
-# Launch 
-kodi-standalone
-
-#Launch and keep terminal usable   
-kodi-standalone &
-
-# Create auto run service for kodi:  
-sudo nano /lib/systemd/system/kodi.service
-    [Unit]
-    Description = Kodi Media Center
-    After = remote-fs.target network-online.target
-    Wants = network-online.target
-
-    [Service]
-    User = pi
-    Group = pi
-    Type = simple
-    ExecStart = /usr/bin/kodi-standalone
-    Restart = on-abort
-    RestartSec = 5
-
-    [Install]
-    WantedBy = multi-user.target
-
-# enable service
-sudo systemctl enable kodi
-
-# start service  
-sudo systemctl start kodi
-
-# stop service  
-sudo systemctl stop kodi
-
-# disabled service
-sudo systemctl disable kodi
