@@ -284,8 +284,12 @@ git config --global commit.gpgsign true
 ### Configure global push. (As of git 2.37.0 git push will create remote branch)
 	
 	git config --global --add --bool push.autoSetupRemote true
-	
-	
+
+ ### Edit global config in a text editor  
+
+ 	git config --global --edit
+
+ 
 ### This repository moved
 
 	remote: This repository moved. Please use the new location [new location]
