@@ -1,3 +1,6 @@
+# show installed packages
+dnf list installed
+
 # install rpm package manually
 sudo rpm -ivh <package>.rpm
 
