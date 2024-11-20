@@ -29,3 +29,6 @@ blueutil --power 0 or blueutil -p 0
 
 # Edit hosts file  
 sudo nano /private/etc/hosts  
+
+# mount guest samba share
+ mount_smbfs //guest@<SERVER>/<SHARE> ~/<MNT_POINT> 
