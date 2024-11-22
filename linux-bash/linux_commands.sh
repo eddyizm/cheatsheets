@@ -15,13 +15,13 @@ ffplay -vf subtitles=$file -i $file
 ffmpeg -i $file -vn -ar 44100 -ac 2 -b:a 320k $file.mp3
 
 # encode to h.265
-ffmpeg -loglevel warning -hide_banner -stats -i $file -vcodec libx265 -crf 28 $file.mkv
+ffmpeg -loglevel quiet -hide_banner -nostats -i $file -vcodec libx265 -crf 28 $file.mkv
 
 # strip audio track, convert track to aac, keep subtitles
- ffmpeg -i $file -map 0:v -map 0:a:0 -map 0:s? -c:v copy -c:a aac -b:a 320k $file
+ffmpeg -i $file -map 0:v -map 0:a:0 -map 0:s? -c:v copy -c:a aac -b:a 320k $file
 
 # combine both encode, audio track removal and aac
- ffmpeg -i "$file" -map 0:v -map 0:a:0 -map 0:s? -c:v libx265 -crf 28 -c:a aac -b:a 320k "$file.mkv"
+ffmpeg -i "$file" -map 0:v -map 0:a:0 -map 0:s? -c:v libx265 -crf 28 -c:a aac -b:a 320k "$file.mkv"
     
 # edit hosts file
 vi /etc/hosts
@@ -62,6 +62,9 @@ ls -l /dev/disk/by-uuid
 
 # check disk health for errors (drive needs to be unmounted)
 sudo fsck  </dev/mount-point>
+
+# mount iso file 
+sudo mount /path/to/image.iso /media/iso -o loop
 
 # use mount to list information 
 mount -l -t vfat; mount -l -t ext4 
