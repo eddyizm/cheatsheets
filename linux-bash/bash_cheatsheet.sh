@@ -269,6 +269,9 @@ for f in * ; do mv $f $(echo $f | tr A-Z a-z); done
 # rysnc back up folder *mirror*
 rsync -avr --delete /Directory1/ /Directory2/
 
+# rsync over ssh 
+rsync -avPz -e ssh /src/ user@remote:/path/to/dst
+
 # rsync exclude
 # passing a file or a folder
 --exclude=exclude.txt 
