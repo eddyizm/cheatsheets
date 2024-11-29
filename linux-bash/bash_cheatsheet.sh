@@ -256,6 +256,8 @@ tar cvf - FILE.VDI | gzip -9 - > FILE.VDI.tar.gz
 # syntax for a folder
 tar cvf - /path/to/dir | gzip -9 - > output.tar.gz
 
+# tar bzip file (bz2)
+tar cfvj  archive.tar.bz2 files
 
 #!/usr/bin/env bash read N lines of end of file and output
 tail --lines=60 /C/Users/eddyizm/Source/Repos/seleniumTesting/env/log.txt > "/C/Users/eddyizm/Documents/My Dropbox/Dropbox/Apps/log.txt"
