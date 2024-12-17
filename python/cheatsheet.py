@@ -1,3 +1,7 @@
+# get error/traceback in try/except blocks (useful in notebooks)
+import traceback
+print(traceback.format_exec())
+
 # create text file in memory
 import io
 f = io.StringIO("some initial text data")
