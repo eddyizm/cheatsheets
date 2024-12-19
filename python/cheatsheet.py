@@ -1,6 +1,6 @@
 # get error/traceback in try/except blocks (useful in notebooks)
 import traceback
-print(traceback.format_exec())
+print(traceback.format_exc())
 
 # create text file in memory
 import io
