@@ -2,6 +2,9 @@
 
 ### Linux Commands
 
+# cli network manager tui
+sudo nmtui
+
 # check all versions of python  
 which -a python python3
 
