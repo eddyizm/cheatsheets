@@ -39,6 +39,7 @@ podman run -d -u root -v sqlserver_dbdata:/var/opt/mssql/data -p 1433:1433 -e AC
 # set up gossa file browser
 podman run -d -v ~/src:/shared:rw,z -p 8001:8001 --userns=keep-id  pldubouilh/gossa
 
+# TODO get this systemd section into a resusable script. 
 # set up systemd services to start rootless containers on boot. 
 podman generate systemd --new --name CONTAINER_NAME -f # if you have a pod, you can use the pod here and it will generate all your files
 # Since the podman generate systemd command is creating a systemd unit file, you can also use the --after=,   --requires=, --wants= options to specify respective dependencies for your container(s).
@@ -49,6 +50,8 @@ systemctl --user status SERVICE_NAME.service
 # failed is ok, delete current containers and then reboot.
 sudo loginctl enable-linger $USER
 # should be golden!
+# end 
+
 
 # get real ip from rootless containers using slirp4netns
 ip a # shows only real network
