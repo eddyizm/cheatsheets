@@ -25,6 +25,9 @@ firewall-cmd --add-forward-port=port=80:proto=tcp:toport=8080
 # or remove forward/redirect 
 firewall-cmd --remove-forward-port=port=80:proto=tcp:toport=8080
 
+# list exposed ports
+firewall-cmd --zone=dmz --list-ports
+
 # list forwared ports
 firewall-cmd --list-forward-ports 
 
