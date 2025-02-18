@@ -25,9 +25,6 @@ firewall-cmd --add-forward-port=port=80:proto=tcp:toport=8080
 # or remove forward/redirect 
 firewall-cmd --remove-forward-port=port=80:proto=tcp:toport=8080
 
-# list exposed ports
-firewall-cmd --zone=dmz --list-ports
-
 # list forwared ports
 firewall-cmd --list-forward-ports 
 
@@ -36,6 +33,19 @@ firewall-cmd --add-masquerade
 
 # make settings persistent
 firewall-cmd --runtime-to-permanent
+
+# list exposed ports
+firewall-cmd --zone=dmz --list-ports
+
+# To make this setting permanent, add the --permanent option and reload the firewall. 
+# expose port 
+firewall-cmd --zone=dmz --add-port=8080/tcp
+
+# expose range of ports
+firewall-cmd --zone=public --add-port=5060-5061/udp
+
+# remove port 
+firewall-cmd --zone=dmz --remove-port=8080/tcp
 
 # oracle cloud specific issues #
 # For 80 HTTP
