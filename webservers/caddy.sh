@@ -5,3 +5,9 @@ caddy reverse-proxy --from <DOMAIN> --to http://<REVERSE_IP>:<PORT>
 which caddy # /usr/bin/caddy
 
 sudo groupadd --system caddy
+
+# hash password for basic auth
+
+caddy hash-password
+	[-p, --plaintext <password>]
+	[-a, --algorithm <name>]
