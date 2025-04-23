@@ -1,3 +1,4 @@
- set tabsize 4
- set tabstospaces
- set linenumbers
+include "/usr/share/nano/*.nanorc"
+set tabsize 4
+set tabstospaces
+set linenumbers
