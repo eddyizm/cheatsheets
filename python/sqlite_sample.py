@@ -1,6 +1,8 @@
 import sqlite3
 from sqlite3 import Error
- 
+
+# get rowcount from cursor after insert/update/delete
+print(cursor.rowcount)
  
 def create_connection(db_file):
     """ create a database connection to a SQLite database """
@@ -14,9 +16,7 @@ def create_connection(db_file):
  
 if __name__ == '__main__':
     create_connection("C:\\sqlite\db\pythonsqlite.db")
-	
-	
-	
+
 import sqlite3
 from sqlite3 import Error
  
