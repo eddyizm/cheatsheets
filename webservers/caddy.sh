@@ -7,7 +7,15 @@ which caddy # /usr/bin/caddy
 sudo groupadd --system caddy
 
 # hash password for basic auth
-
 caddy hash-password
 	[-p, --plaintext <password>]
 	[-a, --algorithm <name>]
+
+# set config to read a auth file or files
+handle_path /protected* {
+        basicauth {
+                import hashedpasswords.auth.*
+        }
+
+        reverse_proxy http://localhost:9200
+}
