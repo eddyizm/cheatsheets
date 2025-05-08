@@ -1,3 +1,6 @@
+// cast datasource to list and grab distinct values
+var distinctValues = (dataGridView1.DataSource as List<YourClass>)?.Select(x => x.PropertyName).Distinct().ToList();
+
 // select particular columns from object 
 using (var context = new StackOverflowContext())
 {
