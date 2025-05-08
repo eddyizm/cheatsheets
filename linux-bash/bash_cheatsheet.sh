@@ -377,6 +377,11 @@ done
 convert -background white -gravity center   \
      DSC00449.jpg -resize 1000x1000 -extent 1000x1000 result.jpg
 
+# convert png to ico (now uses magick or magick convert)
+magick logo.png -resize 32x32 logo.ico
+# convert svg to ico (now uses magick or magick convert)
+magick -density 256x256 -background transparent file-upload-line.svg -define icon:auto-resize -colors 256 file-upload-line.ico
+
 # create large dummy file fast
  dd if=/dev/urandom of=random.img count=1024 bs=10M  # 1024 = 10GB
  
