@@ -39,6 +39,20 @@ podman run -d -u root -v sqlserver_dbdata:/var/opt/mssql/data -p 1433:1433 -e AC
 # set up gossa file browser
 podman run -d -v ~/src:/shared:rw,z -p 8001:8001 --userns=keep-id  pldubouilh/gossa
 
+# podlet to generate quadlets
+podman run -it --rm --userns keep-id -e HOME -e XDG_CONFIG_HOME --user $(id -u) \
+   -v "$PWD":"$PWD" -v "$HOME/.config/containers/systemd/":"$HOME/.config/containers/systemd/" \
+   -w "$PWD" --security-opt label=disable \
+   --pull=newer ghcr.io/containers/podlet \
+   generate pod quote_pod
+
+
+podlet podman run --replace --net=host \
+  --cap-add=NET_ADMIN --cap-add=SYS_ADMIN --cap-add=CAP_MKNOD --security-opt="label=disable" \
+  -v /var/app/list.txt:/list.txt:z \
+  --device=/dev/net/tun --device=/dev/null \
+  --name cdpi -d localhost/my-cdpi:latest -s 1 -d 1 -H /list.txt
+
 # TODO get this systemd section into a resusable script. 
 # set up systemd services to start rootless containers on boot. 
 podman generate systemd --new --name CONTAINER_NAME -f # if you have a pod, you can use the pod here and it will generate all your files
