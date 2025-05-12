@@ -1,3 +1,6 @@
+-- get database name in current context 
+SELECT DB_NAME() as CurrentDatabase;
+
 -- Database names on Server
 Select '<ServerName> | '+ name 
 -- + ' | ' + collation_name 
