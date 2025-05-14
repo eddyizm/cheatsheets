@@ -2,6 +2,12 @@
 
 ### Linux Commands
 
+# hash checks
+echo "testtext1234" | sha1sum
+c4f3e968e497864426d58c2b7383c8e2aa567687  -
+# cut the trailing info
+echo "testtext1234" | sha1sum | cut -d" "  -f 1
+
 # cli network manager tui
 sudo nmtui
 
