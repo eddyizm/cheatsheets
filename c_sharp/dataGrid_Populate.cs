@@ -1,3 +1,6 @@
+// create an editable DataGridView without validation until saving
+dgv.CausesValidation = false;
+
 // change cell/row formatting based on data on prepaint instead of looping through dgv after being rendered
 
 this.dataGridView1.RowPrePaint 
