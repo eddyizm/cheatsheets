@@ -39,11 +39,14 @@ dataGridView1.DataSource = theData.Where(x => x>0).Select((x, index) =>
     new { RecNo = index + 1, ColumnName = x }).OrderByDescending(x => x.ColumnName).ToList();
 	
 // using a class to binding list is cleaner.  
-Class Person()
-// where persons is the class model objects. 
-
-var list = new BindingList<Person>(persons);
-myGrid.DataSource = list;
+var list = new List<Person>()
+{
+    new Person { Name = "Joe", },
+    new Person { Name = "Misha", },
+};
+var bindingList = new BindingList<Person>(list);
+var source = new BindingSource(bindingList, null);
+grid.DataSource = source;
 
 // clean up ui quickly 
 // where datagridview is dgv
