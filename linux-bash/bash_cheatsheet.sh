@@ -1,5 +1,25 @@
 #!/bin/bash
 
+# start process in bash and detach
+nohup ./process &
+
+# irssi irc client 
+# set server name
+/set nick myname
+# enable logs
+/set autolog ON
+# add server/network
+/server add -network [network name] -auto [server address] [port]
+/server add -network irc.irchighway.net -auto irc.irchighway.net 9999
+# connect to network
+/connect liberachat
+# join channel
+/join #irssi
+# accept file 
+/dcc get botname
+
+
+
 # write iso to usb with dd command
 sudo dd bs=4M if=/path/to/file.iso of=/dev/sdX status=progress oflag=sync
 
