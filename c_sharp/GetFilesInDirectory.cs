@@ -1,3 +1,10 @@
+/* get file name from path */
+
+string fullPath = @"C:\Temp\archive.zip";
+string fileName = System.IO.Path.GetFileName(fullPath);      // "archive.zip"
+string nameOnly = System.IO.Path.GetFileNameWithoutExtension(fullPath); // "archive"
+string extension = System.IO.Path.GetExtension(fullPath);    // ".zip"
+
 /* Get files by directory
 */
 
