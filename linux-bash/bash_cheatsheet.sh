@@ -322,11 +322,12 @@ mkdir $(date +"%m-%d-%Y")
     2021-07-16
  
 # find and delete empty folders 
-
 find . -empty -type d -delete
 
-# find and run action on found files or folders using OK to prompt user. 
+# find multiple patterns.
+find . -name "*.png" -o -name "*.jpg"
 
+# find and run action on found files or folders using OK to prompt user. 
 eddyizm@local:~$ find . -iname test* -ok rm {} \;
 < rm ... ./test.txt > ? 
 
