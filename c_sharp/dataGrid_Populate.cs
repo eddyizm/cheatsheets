@@ -1,8 +1,13 @@
 // create an editable DataGridView without validation until saving
 dgv.CausesValidation = false;
 
-// change cell/row formatting based on data on prepaint instead of looping through dgv after being rendered
+// rename column headers in place
+dataGridView1.Columns["OriginalColumnName"].HeaderText = "New Header Text";
 
+// disable horizontal scrollbars
+dataGridview1.ScrollBars = ScrollBars.Vertical;
+
+// change cell/row formatting based on data on prepaint instead of looping through dgv after being rendered
 this.dataGridView1.RowPrePaint 
     += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(
         this.dataGridView1_RowPrePaint);
