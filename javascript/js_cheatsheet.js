@@ -1,5 +1,8 @@
 // Javascript Cheatsheet. 
 
+// format date string
+new Date(item.created).toLocaleDateString("en-US")
+
 // sleep
 await new Promise(resolve => setTimeout(resolve, 3000)); // 3 sec
 
