@@ -1,3 +1,9 @@
+# Enable IDENTITY_INSERT
+with engine.begin() as conn:
+    conn.execute(text(f'SET IDENTITY_INSERT {table} ON'))
+    df.to_sql(table, index=False, con=conn, if_exists='append')
+    conn.execute(text(f'SET IDENTITY_INSERT {table} OFF'))
+
 # pyspark concat columns
 from pyspark.sql.functions import lit
 df_new = df.withColumn('full_name', concat(df.first_name, lit(' '), df.last_name))
