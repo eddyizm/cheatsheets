@@ -75,6 +75,9 @@ sudo fsck  </dev/mount-point>
 # mount iso file 
 sudo mount /path/to/image.iso /media/iso -o loop
 
+# mount nfs share 
+sudo mount -t nfs -o vers=3,nolock,soft 10.0.0.15:/Users/Shared/PublicNFS /mnt/nfs
+
 # use mount to list information 
 mount -l -t vfat; mount -l -t ext4 
 
