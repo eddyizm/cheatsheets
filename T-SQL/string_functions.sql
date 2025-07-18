@@ -1,7 +1,14 @@
 /* string manipulation functions */
 
--- convert number to letter in alphabet
+-- hash value
+SELECT 
+    HASHBYTES('SHA2_256', CONCAT('28.99', '|', '0.00')) AS HashExample;
 
+-- hash value and convert to hex value
+SELECT 
+    CONVERT(VARCHAR(64), HASHBYTES('SHA2_256', 'YourDataHere'), 2) AS HexHash;
+
+-- convert number to letter in alphabet
 DECLARE @number INT = 5; 
 SELECT  Letter = CHAR(64 + @number);
 
@@ -27,4 +34,3 @@ select convert(NUMERIC(18, 2), ISNULL(NULLIF(Interest, ''), '0'))
 
 -- extract folder path from full file path
 select REVERSE( SUBSTRING(REVERSE(Location), CHARINDEX('\', REVERSE(Location)) , LEN (Location))) Folder))
-
