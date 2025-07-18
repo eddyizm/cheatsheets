@@ -1,3 +1,6 @@
+// format decimal to money
+$"{decimalValue:C}";
+
 // get last 3 characters of string
 
 string substr = str.Substring(str.Length - 3);
