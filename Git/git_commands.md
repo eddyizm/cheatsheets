@@ -211,11 +211,18 @@ git push origin master
     # display stashes
     git stash list
     
+    # show stash diff to current  
+    git stash show -p
+
+    # show specific stash diff to current  
+    git stash show -p stash@{2}
+
     # apply latest stash after pulling in
     git stash apply
     
     # or pop the top one
     git stash pop
+    
     
     # The apply option only tries to apply the stashed work — you continue to have 
     # it on your stack. To remove it, you can run git stash drop with the name 
