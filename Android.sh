@@ -18,7 +18,18 @@ pm uninstall --user 0 <PACKAGE NAME>
 # list emulaters
 emulator -list-avds
 
-# launch emulator for cli
-cd $ANDROID_HOME/emulator
+# create new avd
+vdmanager create avd \
+  --name "DevelopmentPixel9" \
+  --package "system-images;android-33-ext4;google_apis_playstore;x86_64" \
+  --device "pixel_9" 
+ 
+# launch previously created avd 
+emulator -avd DevelopmentPixel9 -gpu host
 
-./emulator -avd test_avd_27 
+# install apk on emuilator
+adb install devFileName.apk
+
+# create keystore for release
+keytool -genkeypair -v -keystore tempus-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias tempus-key
+
