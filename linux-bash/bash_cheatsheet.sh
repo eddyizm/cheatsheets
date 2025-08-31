@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# xargs add place holder for input (-I) add (-p) for interactive
+find . -type f -name "*.txt" | xargs -I {} mv {} new_dir
+
 # start process in bash and detach
 nohup ./process &
 
