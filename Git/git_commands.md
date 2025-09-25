@@ -75,7 +75,11 @@
 
 ### check history
 
-    git log
+    git log  
+
+### More detailed log history  
+
+    git reflog
 
 ### show commit history  
 
