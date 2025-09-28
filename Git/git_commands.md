@@ -57,6 +57,11 @@
     # or pull directly
     git pull upstream pull/42/head
     
+### checkout repo PR's locally  
+
+    git fetch origin pull/$ID/head:$BRANCHNAME
+    # where $ID is the pull request id and $BRANCHNAME is the name of the new branch that you want to create.
+    git checkout $BRANCHNAME
 
 ### issues when creating local git and then merging with a repo online. this command saved my life
 
