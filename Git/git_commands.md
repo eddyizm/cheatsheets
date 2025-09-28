@@ -81,6 +81,10 @@
 
     git reflog
 
+### graph log  
+
+    git log --oneline --graph --all
+
 ### show commit history  
 
     git show <commit-id>
