@@ -152,7 +152,10 @@
     
     git branch -v -a
   
-	
+### set remote branch  
+
+    git remote set-url origin git@github.com:eddyizm/eddyizm.git
+
 ### grab all remote branches to local
 
 	git fetch --all
