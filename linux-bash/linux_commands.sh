@@ -89,7 +89,10 @@ sudo mount -t cifs -o credentials=~/.credentials, uid=$(id -u),gid=$(id -g),forc
     //<server.ip/<share.name/ /mnt/<mount.point>
 
 # Generate ssh keys  
-ssh-keygen
+ssh-keygen -f ~/my-key-ecdsa -t ecdsa -b 521
+
+# Copy key  
+ssh-copy-id -i ~/my-key-ecdsa user@host
 
 # list ssh private key 
 ssh-add -l    
