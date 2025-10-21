@@ -1,6 +1,15 @@
 # Android Debug Bridge (adb)
 ######
 
+# adb port forward to enable desktop head unit (android auto)
+adb forward tcp:5277 tcp:5277
+
+# list port forward to validate: 
+adb forward --list
+
+# execute head unit
+LD_LIBRARY_PATH="~/android/sdk/emulator/lib64:$LD_LIBRARY_PATH" ./desktop-head-unit
+
 # get android shell 
 adb shell
 
@@ -48,4 +57,5 @@ adb install devFileName.apk
 
 # create keystore for release
 keytool -genkeypair -v -keystore tempus-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias tempus-key
+
 
