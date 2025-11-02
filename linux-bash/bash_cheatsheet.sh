@@ -161,6 +161,9 @@ sudo fail2ban-client set sshd banip 23.34.45.56
 # whitelist 
 ignoreip = 192.168.10.100 192.168.2.0/32
 
+# get number of days since start of year
+echo date +%j
+
 ### get # day of the week 
 
 DOW=$(date +%u)
