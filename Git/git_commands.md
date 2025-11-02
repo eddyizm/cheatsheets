@@ -43,6 +43,11 @@
 
       git pull upstream master
     
+### fetch changes and then merge 
+
+    git fetch upstream  
+    git merge upstream/main
+
 ### reset fork to upstream main
 
     git fetch upstream
