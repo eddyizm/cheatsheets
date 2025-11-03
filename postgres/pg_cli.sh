@@ -11,3 +11,10 @@ psql -U root -d postgres
 
 # list tables
 \dt
+
+# list schemas
+\dn
+
+# list tables in schema  
+\dt schema_name.*
+
