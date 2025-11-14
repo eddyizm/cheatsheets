@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# read file line by line and process as an arg
+while IFS= read -r file; \
+    do file=$(echo "$file" | xargs); [ -f "$file" ] && echo <DO SOMETHING HERE with "$file"> ; \
+done < file_list.txt
+
 # xargs add place holder for input (-I) add (-p) for interactive
 find . -type f -name "*.txt" | xargs -I {} mv {} new_dir
 
