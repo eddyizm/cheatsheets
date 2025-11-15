@@ -177,23 +177,60 @@ Ctrl+b :
 # after entering prompt  
 :resize-pane -D 10 (Resizes the current pane down by ten cells)
 
-# IO redirection  
-cmd < file
+# show shell
+    echo $SHELL
+
+## IO redirection  
+    cmd < file
 # input of cmd from file
-cmd1 <(cmd2)
+    cmd1 <(cmd2)
+
 # output of cmd2 as file input to cmd1
-cmd > /dev/null
+    cmd > /dev/null
+
+# null output 
+    cmd > /dev/null 2>&1
+
 # standard output (stdout) of cmd to file
 cmd >> file
+
 # append stdout to file
 cmd 2> file
+
 # error output (stderr) of cmd to file
 cmd 1>&2
+
 # stdout to same place as stderr
 cmd 2>&1
-# stderr to same place as stdout
 
+# stderr to same place as stdout
 cmd &> file # every output of cmd to file
 
 cmd >>file.txt 2>&1 #append stdout/stderr
 
+### ls options 
+    -a # show all (including hidden)
+    -R # recursive list
+    -r # reverse order
+    -t # sort by last modified
+    -S #sort by file size
+    -l # long listing format
+    -1 # one file per line
+    -m # comma-separated output
+    -Q # quoted output
+
+#### user management
+# list groups current user belongs to
+groups
+
+# list all groups
+less /etc/group
+
+# add current user to group eg. docker
+sudo usermod -aG docker $USER
+
+# show users in group
+getent group group_name
+
+# show user UID
+id -u username
