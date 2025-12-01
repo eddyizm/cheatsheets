@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# use sed to replace text in a file
+sed -i 's/old-text/new-text/g' input.txt
+
 # read file line by line and process as an arg
 while IFS= read -r file; \
     do file=$(echo "$file" | xargs); [ -f "$file" ] && echo <DO SOMETHING HERE with "$file"> ; \
