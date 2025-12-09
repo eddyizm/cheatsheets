@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# get the right side of a string with an underscore 
+sed 's/.*_//g' input.txt > output.txt
+
 # use sed to replace text in a file
 sed -i 's/old-text/new-text/g' input.txt
 
