@@ -99,6 +99,9 @@
 
     git show <commit-id>
 
+### compares current commit vs previous commit  
+    git diff HEAD HEAD~1  
+
 ### check changes before adding
 
 	git diff file.txt
