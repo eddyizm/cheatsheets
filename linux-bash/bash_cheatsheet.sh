@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# access network manager tui
+sudo nmtui
+
 # get the right side of a string with an underscore 
 sed 's/.*_//g' input.txt > output.txt
 
