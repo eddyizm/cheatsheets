@@ -139,3 +139,6 @@ from django.shortcuts import redirect
 # redirect on login
 # default URL is /accounts/profile/, set fixed url in settings
 LOGIN_REDIRECT_URL = <URL PATH>
+
+# deployment 
+python manage.py collectstatic
