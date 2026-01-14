@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# rename files 
+rename -v 'old' 'new' old.txt
+
 # access network manager tui
 sudo nmtui
 
