@@ -1,5 +1,8 @@
 # git 
 
+### run diff tool in the terminal  
+    git difftool --tool=vimdiff  
+
 ### turn on trace to debug issues  
 
     GIT_TRACE=1 <git command>  
