@@ -59,3 +59,14 @@ adb install devFileName.apk
 keytool -genkeypair -v -keystore tempus-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias tempus-key
 
 
+## Android Studio
+
+# OR - filter by multiple tags  
+(SongRepository)|(BrowsingClient)|(okhttp.OkHttpClient)
+
+# negate tag, package, message, and line
+-message:createUrl()
+
+# regex can be used with negate or alone
+tag~:My.*Tag
+-tag~:My.*Tag
