@@ -2,6 +2,15 @@
 
 ### Linux Commands
 
+# sftp setup 
+
+sudo mkdir -p /sftp/share
+sudo chown root:root /sftp
+sudo chmod 755 /sftp
+
+sudo useradd -m -d /sftp/username -s /sbin/nologin username
+
+
 # hash checks
 echo "testtext1234" | sha1sum
 c4f3e968e497864426d58c2b7383c8e2aa567687  -
