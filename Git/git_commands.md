@@ -151,6 +151,9 @@
     
     git fetch origin
     
+### clean up remote tracking branches  
+    git fetch --prune
+
 #### check log for changes before pulling in changes.
 
 	git log origin/master
