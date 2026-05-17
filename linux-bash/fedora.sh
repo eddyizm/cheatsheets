@@ -4,6 +4,9 @@ dnf list installed
 # install rpm package manually
 sudo rpm -ivh <package>.rpm
 
+# upgrade rpm package 
+sudo rpm -Uvh </path/to/package>.rpm
+
 # check bios
 sudo dmidecode | grep -A3 'Vendor:\|Product:' && \
     sudo lshw -C cpu | grep -A3 'product:\|vendor:'
