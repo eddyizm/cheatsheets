@@ -155,6 +155,9 @@ pdftotext
 # keep layout
 pdftotext -layout input.pdf output.txt
 
+# remove pages from pdf
+pdftk input.pdf cat 1-2 4 6-end output output.pdf
+
 ### tmux
 # List sessions
 tmux ls
