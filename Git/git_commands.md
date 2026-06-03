@@ -276,13 +276,16 @@ git push origin master
 #### amend (or change/update last commit) 
     git commit --amend -m "Your new commit message"
 
-### Revert last merge (very fucking useful)  
+### reset last merge (very fucking useful)  
 
 	git reset --merge ORIG_HEAD
 
-### Revert to particular hash  
+### reset to particular hash  
 	git reset --soft <HASH>
 	
+### using revert 
+    git revert -m 1 <commit-hash>
+
 ### Reverting last commit  
 
     git reset <file>
@@ -292,6 +295,11 @@ git push origin master
 
 ### a hard REVERT to clean anything not yet pushed and unsaved work. BE WEARY!  
 	git reset --hard HEAD^
+
+### cherry pick/remove a PR using rebase  
+    git rebase -i <commit-hash-2-remove>^
+    # find the commit and delete it. solve any conflicts and finish rebase
+
 	
 ### Generate GPG Key 
 
