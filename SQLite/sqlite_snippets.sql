@@ -57,7 +57,6 @@ sqlite3 -- start command line
     `.help  `
 
 -- format output 
-
 sqlite> .mode line
 sqlite> select * from tbl1;
 -- one = hello
@@ -65,6 +64,10 @@ sqlite> select * from tbl1;
 
 -- one = goodbye
 -- two = 20
+
+-- set format to table by default 
+-- add line to ~/.sqliterc
+.mode table
 
 
 -- set output and run query. 
