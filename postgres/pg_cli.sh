@@ -9,6 +9,11 @@ psql db_name < backup.sql
 # connect to db
 psql -U root -d postgres
 
+# list databases
+\l
+# or
+\list
+
 # list tables
 \dt
 
