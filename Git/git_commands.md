@@ -130,6 +130,12 @@
 
     git push origin --tags  
 
+### delete a tag  
+
+    git tag -d <TAG>
+    # then update your changes to remote repo
+    git push origin --delete <TAG>
+
 ### clone existing repo
 
     git clone <yourrepoURL>
