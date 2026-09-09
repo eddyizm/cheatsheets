@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# xrandr move display to external monitor
+xrandr --output eDP-1 --off --output HDMI-1 --auto
+
 # rename files 
 rename -v 'old' 'new' old.txt
 
