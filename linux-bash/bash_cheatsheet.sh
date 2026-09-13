@@ -353,6 +353,9 @@ mkdir $(date +"%m-%d-%Y")
 # find and delete empty folders 
 find . -empty -type d -delete
 
+# find files older than 30 days and delete 
+find /path/to/directory/ -mindepth 1 -mtime +30 -delete
+
 # find multiple patterns.
 find . -name "*.png" -o -name "*.jpg"
 
