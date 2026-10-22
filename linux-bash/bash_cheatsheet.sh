@@ -46,6 +46,9 @@ nohup ./process &
 # write iso to usb with dd command
 sudo dd bs=4M if=/path/to/file.iso of=/dev/sdX status=progress oflag=sync
 
+# wipe the drive (for a clean start)
+sudo wipefs -a /dev/sdX
+
 # format usb/disk to exfat
 sudo mkfs.exfat -n LABEL /dev/sdXn   
 
