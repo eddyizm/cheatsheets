@@ -1,6 +1,9 @@
 # powershell cheatsheet
 ##############################################
 
+# get list of open windows
+Get-Process | Where-Object {$_.MainWindowTitle} | Select-Object Id, MainWindowTitle, ProcessName | Format-Table -AutoSize
+
 # usually use cmd or mingw64 to show open ports
 netstat -abn
 
