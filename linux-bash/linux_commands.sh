@@ -33,10 +33,12 @@ ffplay -vf subtitles=$file -i $file
 ffmpeg -i $file -vn -ar 44100 -ac 2 -b:a 320k $file.mp3
 
 # encode to h.265 (22 or 24 works well)
-ffmpeg -loglevel error -hide_banner -nostats -i "$file" \
-  -c:v libx265 -crf 22 -preset slow \
-  -c:a copy -map 0 \
-  "${file%.*}_h265.mkv"
+ ffmpeg -loglevel warning -hide_banner \
+    -stats -stats_period 1 \
+    -threads 2 -i "$file" \
+    -c:v libx265 -crf 23 -preset slow -c:a copy -map 0 \
+    -x265-params "pools=2:frame-threads=1" \
+    "${file/264/265}
 
 # strip audio track, convert track to aac, keep subtitles
 ffmpeg -i $file -map 0:v -map 0:a:0 -map 0:s? -c:v copy -c:a aac -b:a 320k $file
