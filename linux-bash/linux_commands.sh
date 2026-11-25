@@ -38,7 +38,7 @@ ffmpeg -i $file -vn -ar 44100 -ac 2 -b:a 320k $file.mp3
     -threads 2 -i "$file" \
     -c:v libx265 -crf 23 -preset slow -c:a copy -map 0 \
     -x265-params "pools=2:frame-threads=1" \
-    "${file/264/265}
+    "${file/264/265}"
 
 # strip audio track, convert track to aac, keep subtitles
 ffmpeg -i $file -map 0:v -map 0:a:0 -map 0:s? -c:v copy -c:a aac -b:a 320k $file
